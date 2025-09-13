@@ -220,7 +220,6 @@
   box-sizing: border-box;
 }
 
-/* Grid: 3 columns desktop, stacking on small screens */
 .cards.cards9 > ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -229,10 +228,9 @@
   padding: 0;
   list-style: none;
   box-sizing: border-box;
-  border: none; /* Remove any unwanted borders */
+  border: none;
 }
 
-/* Remove any extra border at the bottom of the grid */
 .cards.cards9 > ul > li {
   border-bottom: none;
   display: flex;
@@ -250,13 +248,10 @@
   }
 }
 
-/* Card container: vertical dividers, flex column for content stacking */
-
 .cards.cards9 > ul > li:last-child {
   border-right: none;
 }
 
-/* Stack .cards-card-body children vertically within each card */
 .cards.cards9 > ul > li > .cards-card-body {
   width: 100%;
   box-sizing: border-box;
@@ -268,7 +263,6 @@
   margin: 0;
 }
 
-/* Video area: only the FIRST .cards-card-body in each card gets video styles */
 .cards.cards9 > ul > li > .cards-card-body:first-child {
   aspect-ratio: 16 / 9;
   background-color: #222;
@@ -284,7 +278,6 @@
   box-sizing: border-box;
 }
 
-/* Add thumbnail images for each video area (replace URLs as needed) */
 .cards.cards9 > ul > li:nth-child(1) > .cards-card-body:first-child {
   background-image: url('/assets/fire-thumb.jpg');
   background-size: cover;
@@ -303,7 +296,6 @@
   background-position: center;
 }
 
-/* Play button overlay: center and show only for the video area */
 .cards.cards9 > ul > li > .cards-card-body:first-child .button-container .button {
   width: 56px;
   height: 56px;
@@ -322,7 +314,6 @@
   justify-content: center;
 }
 
-/* Play triangle (pseudo-element) */
 .cards.cards9 > ul > li > .cards-card-body:first-child .button-container .button::before {
   display: block;
   position: absolute;
@@ -337,7 +328,6 @@
   content: "";
 }
 
-/* Card content section: only NON-FIRST .cards-card-body in each card gets padding/text style */
 .cards.cards9 > ul > li > .cards-card-body:not(:first-child) {
   padding: 32px 36px 36px;
   box-sizing: border-box;
@@ -348,7 +338,6 @@
   justify-content: flex-start;
 }
 
-/* Spacing between video area and title: tighter */
 .cards.cards9 > ul > li > .cards-card-body:not(:first-child) h3 {
   color: #1A237E;
   font-size: 20px;
@@ -359,7 +348,6 @@
   line-height: 1.2;
 }
 
-/* Card description: balanced color/spacing */
 .cards.cards9 > ul > li > .cards-card-body:not(:first-child) p {
   color: #283593;
   font-size: 15px;
@@ -370,14 +358,12 @@
   max-width: 100%;
 }
 
-/* Remove default margin from ul and li within block */
 .cards.cards9 ul,
 .cards.cards9 ul > li {
   margin: 0;
   padding: 0;
 }
 
-/* Responsive: add vertical spacing between cards when stacked */
 @media (width <= 900px) {
   .cards.cards9 > ul > li {
     border-right: none;
@@ -387,5 +373,150 @@
 
   .cards.cards9 > ul > li:last-child {
     border-bottom: none;
+  }
+}
+
+
+.cards.cards10 {
+  background: #071c67;
+  padding: 32px 0;
+}
+
+.cards.cards10 > ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 32px 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  background: transparent;
+}
+
+.cards.cards10 > ul > li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  min-height: 88px;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  padding: 0;
+  list-style: none;
+}
+
+/* Divider + Icon wrapper */
+.cards.cards10 > ul > li > .cards-card-image {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-left: 2px solid #fff;
+  padding-left: 16px;
+  margin-right: 20px;
+  min-width: 54px;
+  gap: 16px;
+  box-sizing: border-box;
+  height: 40px;
+  background: transparent;
+}
+
+/* Icon itself */
+.cards.cards10 > ul > li > .cards-card-image img {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  min-height: 36px;
+  max-width: 36px;
+  max-height: 36px;
+  object-fit: contain;
+  display: block;
+  background: transparent;
+
+  /* Remove filter for now if icons are not visible */
+
+  /* filter: brightness(0) invert(1); */
+}
+
+/* Label/Body */
+.cards.cards10 > ul > li > .cards-card-body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.25;
+  min-width: 0;
+  flex: 1 1 auto;
+  margin-right: 16px;
+  margin-left: 0;
+  white-space: normal;
+  overflow: visible;
+
+  /* Ensure text is not collapsed */
+}
+
+/* Chevron arrow */
+.cards.cards10 > ul > li > .cards-card-body::after {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: 20px;
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 20 20" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M8 5l5 5-5 5" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat center center;
+  background-size: 20px 20px;
+  vertical-align: middle;
+  content: "";
+}
+
+/* Fix possible collapse from global image rules */
+.cards.cards10 > ul > li > .cards-card-image img,
+.cards.cards10 > ul > li > .cards-card-image picture {
+  max-width: none;
+  width: 36px;
+  height: 36px;
+  display: block;
+}
+
+@media (width <= 899px) {
+  .cards.cards10 > ul {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 24px;
+  }
+
+  .cards.cards10 > ul > li {
+    min-height: 76px;
+  }
+
+  .cards.cards10 > ul > li > .cards-card-body {
+    font-size: 18px;
+  }
+}
+
+@media (width <= 599px) {
+  .cards.cards10 > ul {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+    gap: 16px 0;
+  }
+
+  .cards.cards10 > ul > li {
+    min-height: 60px;
+  }
+
+  .cards.cards10 > ul > li > .cards-card-image {
+    min-width: 36px;
+    height: 32px;
+    margin-right: 12px;
+    padding-left: 10px;
+    gap: 10px;
+  }
+
+  .cards.cards10 > ul > li > .cards-card-body {
+    font-size: 16px;
   }
 }
