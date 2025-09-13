@@ -841,3 +841,116 @@
     padding: 8px 0;
   }
 }
+
+
+.hero.hero24 {
+  background: #171c52;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero.hero24::after {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 68vw;
+  height: 100%;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg, rgb(255 255 255 / 9%) 0%, rgb(255 255 255 / 0%) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Hide any images or empty nodes from structure */
+.hero.hero24 img,
+.hero.hero24 > div:first-child,
+.hero.hero24 > div > div:empty,
+.hero.hero24 > div > div > p:empty {
+  display: none;
+}
+
+/* Main content container (text block) styling */
+.hero.hero24 > div:last-child {
+  max-width: 440px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  padding: 0 8px;
+  margin-top: 3vh; /* Slightly lower inner block for balance */
+}
+
+/* Headline styling */
+.hero.hero24 h2 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  font-style: italic;
+  color: #fff;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 2.4rem;
+  line-height: 1.07;
+  letter-spacing: -1px;
+}
+
+/* <em> in headline stays white/bold/italic */
+.hero.hero24 h2 em {
+  color: #fff;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* Gap after headline before first paragraph */
+.hero.hero24 h2 + p {
+  margin-top: 2.1rem;
+}
+
+/* Paragraph styling */
+.hero.hero24 p {
+  color: #fff;
+  font-size: 1.19rem;
+  line-height: 1.48;
+  text-align: center;
+  margin: 0 0 1.05rem;
+  font-weight: 400;
+}
+
+/* Remove last paragraph margin for tight block edge */
+.hero.hero24 p:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (width <= 900px) {
+  .hero.hero24 > div:last-child {
+    max-width: 97vw;
+    margin-top: 2.5vh;
+    padding: 0 4px;
+  }
+
+  .hero.hero24 h2 {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .hero.hero24 h2 + p {
+    margin-top: 1rem;
+  }
+
+  .hero.hero24 p {
+    font-size: 1rem;
+    margin-bottom: 0.65rem;
+    line-height: 1.22;
+  }
+}
