@@ -912,6 +912,19 @@
           "section": "section-1"
         }
       ]
+    },
+    {
+      "name": "Video",
+      "cluster": 28,
+      "instances": [
+        {
+          "url": "https://articles.nrma.com.au/the-knowledge-keepers/index.html",
+          "urlHash": "bae287ca3dc78600c99cb6298b4914c2a2b38c08",
+          "uuid": "bae287ca-02-5ea2acaf7d1b26aaa559a2cc3cffbc0796b43145",
+          "xpath": "/html[1]/body[1]/article[1]/div[2]",
+          "section": "section-4"
+        }
+      ]
     }
   ],
   "outliers": [
@@ -1229,13 +1242,6 @@
       "uuid": "5f0e6b6c-07-4a55f519de9d1dc617df281497661cde9fca7791",
       "xpath": "/html[1]/body[1]/article[1]/section[1]/div[3]",
       "section": "section-1"
-    },
-    {
-      "url": "https://articles.nrma.com.au/the-knowledge-keepers/index.html",
-      "urlHash": "bae287ca3dc78600c99cb6298b4914c2a2b38c08",
-      "uuid": "bae287ca-02-5ea2acaf7d1b26aaa559a2cc3cffbc0796b43145",
-      "xpath": "/html[1]/body[1]/article[1]/div[2]",
-      "section": "section-4"
     },
     {
       "url": "https://articles.nrma.com.au/the-knowledge-keepers/index.html",
