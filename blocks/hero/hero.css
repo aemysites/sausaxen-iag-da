@@ -1715,7 +1715,6 @@
   letter-spacing: 0;
 }
 
-/* Responsive adjustments */
 @media (width <= 900px) {
   .hero.hero37 > div:last-child {
     padding-bottom: 7vh;
@@ -1735,4 +1734,115 @@
   }
 }
 
-/* Ensure hero spans full width */
+
+.hero.hero38 {
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #f4f6f6 0%, #e9ecec 100%);
+  position: relative;
+}
+
+/* Main stacking and centering of children */
+.hero.hero38 > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Make the logo/image much larger and ensure it remains dominant */
+.hero.hero38 > div:first-child {
+  margin-top: 0;
+  margin-bottom: 36px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero.hero38 > div:first-child picture,
+.hero.hero38 > div:first-child > div > picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0;
+  position: static;
+}
+
+.hero.hero38 > div:first-child img {
+  max-width: 620px;
+  min-width: 340px;
+  width: 50vw;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+  box-shadow: 0 2px 24px 0 rgb(0 0 0 / 4%); /* Subtle depth for hero effect */
+  border-radius: 8px;
+}
+
+/* Text styling below logo - keep smaller and spaced for classic hero look */
+.hero.hero38 > div:nth-child(2) {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.hero.hero38 > div:nth-child(2) > div {
+  color: #00298c;
+  font-size: 1.35rem;
+  font-weight: 500;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 0;
+  line-height: 1.25;
+  max-width: 600px;
+}
+
+/* Responsive adjustments for mobile */
+@media (width <= 900px) {
+  .hero.hero38 > div:first-child img {
+    max-width: 85vw;
+    min-width: 0;
+    width: 85vw;
+  }
+
+  .hero.hero38 > div:nth-child(2) > div {
+    font-size: 1.1rem;
+    margin-top: 16px;
+    max-width: 92vw;
+  }
+}
+
+@media (width <= 600px) {
+  .hero.hero38 {
+    min-height: 65vh;
+    padding: 0;
+  }
+
+  .hero.hero38 > div:first-child img {
+    max-width: 98vw;
+    width: 98vw;
+    border-radius: 4px;
+  }
+
+  .hero.hero38 > div:nth-child(2) > div {
+    font-size: 0.98rem;
+    margin-top: 10px;
+    max-width: 98vw;
+  }
+}
