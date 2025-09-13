@@ -1289,8 +1289,6 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-
-  /* Shift block slightly higher for more authentic hero feel */
   padding-top: 8vh;
   padding-bottom: 10vh;
 }
@@ -1303,7 +1301,6 @@
   align-items: center;
 }
 
-/* Logo block (first div) */
 .hero.hero34 > div:first-child {
   margin-bottom: 36px;
   width: 100%;
@@ -1322,7 +1319,6 @@
   object-fit: cover;
 }
 
-/* Add margin between stacked images in logo block if more than one image */
 .hero.hero34 > div:first-child picture + picture,
 .hero.hero34 > div:first-child img + img,
 .hero.hero34 > div:first-child picture + img,
@@ -1330,7 +1326,6 @@
   margin-top: 18px;
 }
 
-/* Content block (second div) */
 .hero.hero34 > div:last-child {
   width: 100%;
   display: flex;
@@ -1345,7 +1340,6 @@
   align-items: center;
 }
 
-/* Lifeline logo row: force third <p> inside second div to be a horizontal flex row */
 .hero.hero34 > div:last-child > div > p:nth-child(3) {
   display: flex;
   flex-direction: row;
@@ -1357,7 +1351,6 @@
   width: 100%;
 }
 
-/* Lifeline row logo sizing */
 .hero.hero34 > div:last-child > div > p:nth-child(3) picture,
 .hero.hero34 > div:last-child > div > p:nth-child(3) img {
   max-width: 44px;
@@ -1366,7 +1359,6 @@
   display: block;
 }
 
-/* Heading styling */
 .hero.hero34 h1,
 .hero.hero34 h2,
 .hero.hero34 h3 {
@@ -1379,7 +1371,6 @@
   max-width: 600px;
 }
 
-/* Button container and button styling */
 .hero.hero34 .button-container {
   display: flex;
   justify-content: center;
@@ -1408,7 +1399,6 @@
   background: #222e6f;
 }
 
-/* Responsiveness */
 @media (width <= 600px) {
   .hero.hero34 > div {
     max-width: 98vw;
@@ -1442,5 +1432,138 @@
 @media (width <= 400px) {
   .hero.hero34 > div:first-child {
     margin-bottom: 14px;
+  }
+}
+
+
+.hero.hero35 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: #061c77;
+  color: #fff;
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Remove any background, box, or border from columns and their inner wrappers */
+.hero.hero35 > div,
+.hero.hero35 > div > div {
+  background: none;
+  box-shadow: none;
+  border: none;
+}
+
+/* Columns: each takes half, vertical center */
+.hero.hero35 > div {
+  flex: 1 1 0;
+  display: flex;
+  min-width: 0;
+  height: 100%;
+  align-items: center;
+}
+
+/* LEFT COLUMN: Center image in its column, with whitespace on left and right */
+.hero.hero35 > div:first-child {
+  justify-content: center;
+  align-items: center;
+  padding-left: 8vw;
+  padding-right: 2vw;
+}
+
+.hero.hero35 > div:first-child > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.hero.hero35 picture,
+.hero.hero35 img {
+  display: block;
+  max-width: 90%;
+  max-height: 56vh;
+  height: auto;
+  width: auto;
+  object-fit: contain;
+  margin: 0;
+  z-index: unset;
+}
+
+/* RIGHT COLUMN: Text closer to center, not right-shifted */
+.hero.hero35 > div:last-child {
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 3vw;
+  padding-right: 8vw;
+}
+
+.hero.hero35 > div:last-child > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* Headline and paragraph: large, left aligned, no excessive width */
+.hero.hero35 h1 {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 0 2rem;
+  line-height: 1.05;
+  text-align: left;
+  max-width: 670px;
+}
+
+.hero.hero35 p {
+  color: #fff;
+  font-size: 1.15rem;
+  margin: 0;
+  text-align: left;
+  max-width: 670px;
+}
+
+/* Responsive: stack vertically, preserve alignment */
+@media (width <= 900px) {
+  .hero.hero35 {
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: unset;
+    padding: 0 4vw;
+  }
+
+  .hero.hero35 > div {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 2rem;
+    height: auto;
+  }
+
+  .hero.hero35 > div:last-child,
+  .hero.hero35 > div:first-child {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 0;
+  }
+
+  .hero.hero35 h1,
+  .hero.hero35 p {
+    max-width: 100%;
+  }
+
+  .hero.hero35 picture,
+  .hero.hero35 img {
+    max-width: 100%;
+    max-height: 32vh;
   }
 }
