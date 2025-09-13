@@ -691,22 +691,6 @@
       ]
     },
     {
-      "name": "header",
-      "cluster": 21,
-      "source": "Header",
-      "target": "Header (header21)",
-      "key": "header21",
-      "instances": [
-        {
-          "url": "https://articles.nrma.com.au/help-always/index.html",
-          "urlHash": "509a59fe74da21c77ed657e941f6b09b07e2b3b3",
-          "uuid": "509a59fe-00-596805f6d73c34f49fe400e2e9d08547d11ac319",
-          "xpath": "/html[1]/body[1]/article[1]/header[1]",
-          "section": "section-2"
-        }
-      ]
-    },
-    {
       "name": "Hero",
       "cluster": 22,
       "source": "Hero",
@@ -967,6 +951,19 @@
           "url": "https://articles.nrma.com.au/nrmaboat/index.html",
           "urlHash": "e383823235d56aab941e1002aba185344de9f6b0",
           "uuid": "e3838232-00-596805f6d73c34f49fe400e2e9d08547d11ac319",
+          "xpath": "/html[1]/body[1]/article[1]/header[1]",
+          "section": "section-2"
+        }
+      ]
+    },
+    {
+      "name": "Hero",
+      "cluster": 38,
+      "instances": [
+        {
+          "url": "https://articles.nrma.com.au/help-always/index.html",
+          "urlHash": "509a59fe74da21c77ed657e941f6b09b07e2b3b3",
+          "uuid": "509a59fe-00-596805f6d73c34f49fe400e2e9d08547d11ac319",
           "xpath": "/html[1]/body[1]/article[1]/header[1]",
           "section": "section-2"
         }
