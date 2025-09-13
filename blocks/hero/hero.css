@@ -1749,7 +1749,6 @@
   position: relative;
 }
 
-/* Main stacking and centering of children */
 .hero.hero38 > div {
   width: 100%;
   display: flex;
@@ -1758,7 +1757,6 @@
   justify-content: center;
 }
 
-/* Make the logo/image much larger and ensure it remains dominant */
 .hero.hero38 > div:first-child {
   margin-top: 0;
   margin-bottom: 36px;
@@ -1787,11 +1785,10 @@
   object-fit: contain;
   margin: 0 auto;
   display: block;
-  box-shadow: 0 2px 24px 0 rgb(0 0 0 / 4%); /* Subtle depth for hero effect */
+  box-shadow: 0 2px 24px 0 rgb(0 0 0 / 4%);
   border-radius: 8px;
 }
 
-/* Text styling below logo - keep smaller and spaced for classic hero look */
 .hero.hero38 > div:nth-child(2) {
   width: 100%;
   display: flex;
@@ -1813,7 +1810,6 @@
   max-width: 600px;
 }
 
-/* Responsive adjustments for mobile */
 @media (width <= 900px) {
   .hero.hero38 > div:first-child img {
     max-width: 85vw;
@@ -1844,5 +1840,178 @@
     font-size: 0.98rem;
     margin-top: 10px;
     max-width: 98vw;
+  }
+}
+
+.hero.hero39 {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+  background: transparent;
+}
+
+/* Background image */
+.hero.hero39 > div:first-child {
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero.hero39 > div:first-child picture,
+.hero.hero39 > div:first-child img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+}
+
+.hero.hero39 > div:first-child::after {
+  display: block;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgb(20 35 58 / 65%) 0%, rgb(20 35 58 / 28%) 80%, rgb(20 35 58 / 12%) 100%);
+  z-index: 2;
+  pointer-events: none;
+  content: "";
+}
+
+/* --------- Main Content Block --------- */
+.hero.hero39 > div:last-child {
+  position: relative;
+  z-index: 3;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  pointer-events: auto;
+}
+
+/* Single vertical flex column for ALL content, left-aligned and grouped */
+.hero.hero39 > div:last-child > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 18px;
+  padding: 60px 0 0 64px;
+  max-width: 700px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Logo row: side by side */
+.hero.hero39 > div:last-child > div > p:nth-child(1),
+.hero.hero39 > div:last-child > div > p:nth-child(2),
+.hero.hero39 > div:last-child > div > p:nth-child(3) {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 32px;
+  margin-bottom: 0;
+}
+
+.hero.hero39 > div:last-child > div > p:nth-child(1) img,
+.hero.hero39 > div:last-child > div > p:nth-child(2) img,
+.hero.hero39 > div:last-child > div > p:nth-child(3) picture img {
+  max-height: 36px;
+  width: auto;
+  object-fit: contain;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Main heading/title image: large, prominent, orange, stacked under logos */
+.hero.hero39 > div:last-child > div > p:nth-child(6) picture img {
+  max-width: 440px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin: 12px 0 0;
+  display: block;
+}
+
+/* Strapline under title, left-aligned */
+.hero.hero39 > div:last-child > div > p:nth-child(7) {
+  margin: 8px 0 0;
+  color: #fff;
+  font-size: 1.04rem;
+  font-weight: 600;
+  text-align: left;
+  letter-spacing: 0.01em;
+  padding: 0;
+}
+
+/* Description/subtitle, left-aligned, grouped below strapline */
+.hero.hero39 > div:last-child > div > h4 {
+  color: #fff;
+  font-size: 1.16rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: left;
+  margin: 10px 0 0;
+  padding: 0;
+  max-width: 90%;
+}
+
+/* CTA button below subtitle, left-aligned and grouped */
+.hero.hero39 .button-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 12px;
+  width: 100%;
+}
+
+.hero.hero39 .button-container .button {
+  background: #fff;
+  color: #2b458f;
+  font-size: 1.08rem;
+  font-weight: 700;
+  padding: 14px 32px;
+  border-radius: 26px;
+  border: none;
+  box-shadow: 0 4px 24px rgb(0 0 0 / 18%);
+  text-decoration: none;
+  margin: 0;
+  transition: background 0.2s, color 0.2s;
+}
+
+.hero.hero39 .button-container .button:hover,
+.hero.hero39 .button-container .button:focus {
+  background: #e9eafd;
+  color: #1d3ecf;
+}
+
+/* Legibility over bg image */
+.hero.hero39 > div:last-child > div > * {
+  text-shadow: 0 2px 8px rgb(20 35 58 / 18%), 0 0 1px #000;
+}
+
+/* Responsive: stack and left pad */
+@media (width <= 900px) {
+  .hero.hero39 > div:first-child,
+  .hero.hero39 > div:last-child {
+    position: static;
+    width: 100vw;
+    height: auto;
+    min-height: 70vh;
+  }
+
+  .hero.hero39 > div:last-child {
+    min-height: 70vh;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 16px;
+    padding-left: 0;
+  }
+
+  .hero.hero39 > div:last-child > div {
+    padding: 32px 5vw 0;
+    max-width: 99vw;
+    gap: 15px;
   }
 }
