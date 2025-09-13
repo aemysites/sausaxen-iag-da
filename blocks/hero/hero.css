@@ -607,12 +607,9 @@
   box-sizing: border-box;
   align-items: flex-start;
   justify-content: flex-start;
-
-  /* Remove excess height so the block ends at the image bottom */
   min-height: unset;
 }
 
-/* Image column: visually dominant but not overwhelming */
 .hero.hero18 > div:first-child {
   flex: 1.65 1 0;
   display: flex;
@@ -624,14 +621,12 @@
   order: 1;
 }
 
-/* Remove z-index from picture inside hero */
 .hero.hero18 picture {
   position: static;
   inset: unset;
   box-sizing: border-box;
 }
 
-/* Make image fill its container and cover area */
 .hero.hero18 img {
   width: 100%;
   height: 100%;
@@ -640,7 +635,6 @@
   vertical-align: top;
 }
 
-/* Text column: wider for breathing room, tighter grouping */
 .hero.hero18 > div:last-child {
   flex: 1.15 1 0;
   display: flex;
@@ -656,14 +650,12 @@
   margin: 0;
 }
 
-/* Text area: allow more horizontal space */
 .hero.hero18 > div:last-child > div {
   width: 100%;
   max-width: 630px;
   margin: 0;
 }
 
-/* Heading and paragraphs */
 .hero.hero18 h2 {
   color: #fff;
   font-size: 2.5rem;
@@ -682,12 +674,10 @@
   text-align: left;
 }
 
-/* Reduce gap above blockquote */
 .hero.hero18 p:last-of-type {
   margin-bottom: 0.5rem;
 }
 
-/* Blockquote: visually grouped, tight to last paragraph */
 .hero.hero18 blockquote {
   margin-top: 0.8rem;
   margin-bottom: 0;
@@ -699,7 +689,6 @@
   text-align: left;
 }
 
-/* Responsive adjustments for smaller screens */
 @media (width <= 900px) {
   .hero.hero18 {
     flex-direction: column;
@@ -719,5 +708,136 @@
   .hero.hero18 h2 {
     font-size: 2rem;
     margin-bottom: 1.2rem;
+  }
+}
+
+
+.hero.hero22 {
+  background: #FCB7A8;
+  width: 100vw;
+  min-height: 320px;
+  padding: 28px 0 32px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero.hero22 > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.hero.hero22 > div:first-child {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.hero.hero22 > div:first-child > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.hero.hero22 > div:first-child p {
+  margin: 0 0 8px;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #10106E;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero.hero22 > div:nth-child(2) > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 950px;
+  box-sizing: border-box;
+  gap: 10px;
+}
+
+.hero.hero22 h2 {
+  color: #10106E;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0.35em 0 0.12em;
+  line-height: 1.13;
+  max-width: 900px;
+  width: 100%;
+}
+
+.hero.hero22 p {
+  color: #10106E;
+  font-size: 1.12rem;
+  text-align: center;
+  font-weight: normal;
+  margin: 0.3em 0 0;
+  max-width: 800px;
+  width: 100%;
+  line-height: 1.5;
+}
+
+.hero.hero22 img {
+  display: none;
+}
+
+@media (width <= 1000px) {
+  .hero.hero22 > div,
+  .hero.hero22 > div:nth-child(2) > div {
+    max-width: 98vw;
+    gap: 8px;
+    padding: 0 12px;
+  }
+
+  .hero.hero22 h2 {
+    font-size: 2.1rem;
+    max-width: 98vw;
+  }
+
+  .hero.hero22 p {
+    font-size: 1rem;
+    max-width: 98vw;
+  }
+
+  .hero.hero22 {
+    padding: 16px 0;
+  }
+}
+
+@media (width <= 600px) {
+  .hero.hero22 > div,
+  .hero.hero22 > div:nth-child(2) > div {
+    padding: 0 4vw;
+    gap: 6px;
+  }
+
+  .hero.hero22 h2 {
+    font-size: 1.3rem;
+  }
+
+  .hero.hero22 p {
+    font-size: 0.93rem;
+  }
+
+  .hero.hero22 {
+    padding: 8px 0;
   }
 }
