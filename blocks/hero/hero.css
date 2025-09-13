@@ -1451,7 +1451,6 @@
   overflow: hidden;
 }
 
-/* Remove any background, box, or border from columns and their inner wrappers */
 .hero.hero35 > div,
 .hero.hero35 > div > div {
   background: none;
@@ -1459,7 +1458,6 @@
   border: none;
 }
 
-/* Columns: each takes half, vertical center */
 .hero.hero35 > div {
   flex: 1 1 0;
   display: flex;
@@ -1468,7 +1466,6 @@
   align-items: center;
 }
 
-/* LEFT COLUMN: Center image in its column, with whitespace on left and right */
 .hero.hero35 > div:first-child {
   justify-content: center;
   align-items: center;
@@ -1496,7 +1493,6 @@
   z-index: unset;
 }
 
-/* RIGHT COLUMN: Text closer to center, not right-shifted */
 .hero.hero35 > div:last-child {
   justify-content: flex-start;
   align-items: center;
@@ -1512,7 +1508,6 @@
   width: 100%;
 }
 
-/* Headline and paragraph: large, left aligned, no excessive width */
 .hero.hero35 h1 {
   color: #fff;
   font-size: 3rem;
@@ -1531,7 +1526,6 @@
   max-width: 670px;
 }
 
-/* Responsive: stack vertically, preserve alignment */
 @media (width <= 900px) {
   .hero.hero35 {
     flex-direction: column;
@@ -1565,5 +1559,87 @@
   .hero.hero35 img {
     max-width: 100%;
     max-height: 32vh;
+  }
+}
+
+
+.hero.hero36 {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero.hero36 > div:first-child {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+}
+
+.hero.hero36 > div:first-child picture,
+.hero.hero36 > div:first-child img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero.hero36 > div:last-child {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  padding: 0 0.5vw;
+}
+
+.hero.hero36 h1 {
+  color: #fff;
+  font-size: clamp(2.2rem, 6vw, 3.7rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0 0 1.1rem;
+  text-shadow: 0 2px 10px rgb(0 0 0 / 13%);
+  max-width: 1000px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.hero.hero36 p {
+  margin: 0;
+}
+
+.hero.hero36 p strong {
+  color: #fff;
+  font-size: 1.7rem;
+  font-weight: 600;
+  text-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+}
+
+@media (width <= 900px) {
+  .hero.hero36 {
+    min-height: 70vh;
+    height: 70vh;
+  }
+
+  .hero.hero36 h1 {
+    font-size: clamp(1.3rem, 8vw, 2.2rem);
+    max-width: 98vw;
+  }
+
+  .hero.hero36 > div:last-child {
+    padding: 0 3vw;
   }
 }
