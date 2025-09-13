@@ -480,7 +480,6 @@
   overflow: hidden;
 }
 
-/* Left image column - force image to fill the area completely */
 .hero.hero15 > div:first-child {
   flex: 1 1 54%;
   display: flex;
@@ -526,7 +525,6 @@
   min-width: 100%;
 }
 
-/* Right text column */
 .hero.hero15 > div:last-child {
   flex: 1 1 46%;
   background: #201A2A;
@@ -561,13 +559,11 @@
   margin-right: 0;
 }
 
-/* Remove blockquote border and padding */
 .hero.hero15 blockquote {
   border-left: none;
   padding-left: 0;
 }
 
-/* Responsive: Stack vertically on small screens */
 @media (width <= 900px) {
   .hero.hero15 {
     flex-direction: column;
@@ -597,5 +593,131 @@
   .hero.hero15 > div:first-child img {
     width: 100%;
     min-width: 100%;
+  }
+}
+
+
+.hero.hero18 {
+  display: flex;
+  flex-direction: row;
+  background: #18132B;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  /* Remove excess height so the block ends at the image bottom */
+  min-height: unset;
+}
+
+/* Image column: visually dominant but not overwhelming */
+.hero.hero18 > div:first-child {
+  flex: 1.65 1 0;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  min-width: 0;
+  min-height: 600px;
+  background: none;
+  order: 1;
+}
+
+/* Remove z-index from picture inside hero */
+.hero.hero18 picture {
+  position: static;
+  inset: unset;
+  box-sizing: border-box;
+}
+
+/* Make image fill its container and cover area */
+.hero.hero18 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  vertical-align: top;
+}
+
+/* Text column: wider for breathing room, tighter grouping */
+.hero.hero18 > div:last-child {
+  flex: 1.15 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: #18132B;
+  color: #fff;
+  padding: 2rem 2.5rem 2rem 2rem;
+  min-width: 0;
+  min-height: 600px;
+  order: 2;
+  margin: 0;
+}
+
+/* Text area: allow more horizontal space */
+.hero.hero18 > div:last-child > div {
+  width: 100%;
+  max-width: 630px;
+  margin: 0;
+}
+
+/* Heading and paragraphs */
+.hero.hero18 h2 {
+  color: #fff;
+  font-size: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  line-height: 1.15;
+  text-align: left;
+}
+
+.hero.hero18 p {
+  color: #fff;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+/* Reduce gap above blockquote */
+.hero.hero18 p:last-of-type {
+  margin-bottom: 0.5rem;
+}
+
+/* Blockquote: visually grouped, tight to last paragraph */
+.hero.hero18 blockquote {
+  margin-top: 0.8rem;
+  margin-bottom: 0;
+  padding-left: 1.1rem;
+  border-left: 4px solid #f33;
+  font-size: 1.18rem;
+  color: #fff;
+  font-style: italic;
+  text-align: left;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (width <= 900px) {
+  .hero.hero18 {
+    flex-direction: column;
+  }
+
+  .hero.hero18 > div:first-child,
+  .hero.hero18 > div:last-child {
+    min-height: 250px;
+    padding: 1.3rem 1rem;
+    order: unset;
+  }
+
+  .hero.hero18 > div:last-child > div {
+    max-width: 100%;
+  }
+
+  .hero.hero18 h2 {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
   }
 }
