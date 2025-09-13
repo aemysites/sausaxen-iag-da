@@ -139,13 +139,6 @@
       "key": "header1",
       "instances": [
         {
-          "url": "https://articles.nrma.com.au/nrmaboating/index.html",
-          "urlHash": "186c6de3ce6c238a0597cd0cee647ec801de0f50",
-          "uuid": "186c6de3-00-596805f6d73c34f49fe400e2e9d08547d11ac319",
-          "xpath": "/html[1]/body[1]/article[1]/header[1]",
-          "section": "section-2"
-        },
-        {
           "url": "https://articles.nrma.com.au/nrmaboat/index.html",
           "urlHash": "e383823235d56aab941e1002aba185344de9f6b0",
           "uuid": "e3838232-00-596805f6d73c34f49fe400e2e9d08547d11ac319",
@@ -966,6 +959,19 @@
           "uuid": "55a6497a-00-596805f6d73c34f49fe400e2e9d08547d11ac319",
           "xpath": "/html[1]/body[1]/article[1]/header[1]",
           "section": "section-1"
+        }
+      ]
+    },
+    {
+      "name": "Hero",
+      "cluster": 36,
+      "instances": [
+        {
+          "url": "https://articles.nrma.com.au/nrmaboating/index.html",
+          "urlHash": "186c6de3ce6c238a0597cd0cee647ec801de0f50",
+          "uuid": "186c6de3-00-596805f6d73c34f49fe400e2e9d08547d11ac319",
+          "xpath": "/html[1]/body[1]/article[1]/header[1]",
+          "section": "section-2"
         }
       ]
     }
