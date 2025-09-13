@@ -1,6 +1,5 @@
 {
-  "fragments": [ 
-  ],
+  "fragments": [],
   "blocks": [
     {
       "name": "Cards",
@@ -731,7 +730,7 @@
     },
     {
       "name": "Hero",
-      "cluster": 31,  
+      "cluster": 31,
       "source": "Hero",
       "target": "Hero (hero31)",
       "key": "hero31",
@@ -811,7 +810,7 @@
     },
     {
       "name": "Hero",
-      "cluster": 36,  
+      "cluster": 36,
       "source": "Hero",
       "target": "Hero (hero36)",
       "key": "hero36",
