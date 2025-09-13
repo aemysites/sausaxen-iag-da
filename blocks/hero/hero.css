@@ -384,12 +384,9 @@
   align-items: center;
   padding: 0;
   position: relative;
-
-  /* Prevent collapse if empty */
   min-width: 1px;
 }
 
-/* Ensure all direct children stack vertically and take full width */
 .hero.hero12 > div {
   display: flex;
   flex-direction: column;
@@ -399,7 +396,6 @@
   min-height: 0;
 }
 
-/* Force nested structures to stack and center (up to 4 deep just in case) */
 .hero.hero12 > div > div,
 .hero.hero12 > div > div > div,
 .hero.hero12 > div > div > div > div {
@@ -410,12 +406,10 @@
   width: 100%;
 }
 
-/* Add vertical spacing between stacked elements, except last */
 .hero.hero12 > div > div > *:not(:last-child) {
   margin-bottom: 24px;
 }
 
-/* Styling for badge/logo (picture and image) */
 .hero.hero12 picture,
 .hero.hero12 img {
   display: block;
@@ -427,7 +421,6 @@
   object-fit: contain;
 }
 
-/* Headings: bold, large, navy, centered */
 .hero.hero12 h1,
 .hero.hero12 h2,
 .hero.hero12 h3 {
@@ -439,7 +432,6 @@
   text-align: center;
 }
 
-/* Paragraph: navy, center, spacing */
 .hero.hero12 p {
   color: #0c1e56;
   font-size: 1rem;
@@ -449,7 +441,6 @@
   text-align: center;
 }
 
-/* Down arrow or last element: spacing, navy, center */
 .hero.hero12 > div > div > *:last-child {
   color: #0c1e56;
   font-size: 2rem;
@@ -457,14 +448,12 @@
   text-align: center;
 }
 
-/* Ensure icons are navy */
 .hero.hero12 svg {
   fill: #0c1e56;
   display: block;
   margin: 0 auto;
 }
 
-/* Responsive: scale down on smaller screens */
 @media (width <= 700px) {
   .hero.hero12 h1,
   .hero.hero12 h2,
@@ -475,5 +464,138 @@
   .hero.hero12 picture,
   .hero.hero12 img {
     width: 72px;
+  }
+}
+
+
+.hero.hero15 {
+  display: flex;
+  flex-direction: row;
+  min-height: 640px;
+  background: #201A2A;
+  width: 100vw;
+  max-width: 100vw;
+  align-items: stretch;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Left image column - force image to fill the area completely */
+.hero.hero15 > div:first-child {
+  flex: 1 1 54%;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  background: none;
+  min-height: 100%;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.hero.hero15 > div:first-child > div {
+  flex: 1 1 100%;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.hero.hero15 > div:first-child picture {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  z-index: 0;
+}
+
+.hero.hero15 > div:first-child img {
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border: none;
+  margin: 0;
+  padding: 0;
+  max-width: none;
+  max-height: none;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+/* Right text column */
+.hero.hero15 > div:last-child {
+  flex: 1 1 46%;
+  background: #201A2A;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100%;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.hero.hero15 > div:last-child > div {
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 56px 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero.hero15 h2,
+.hero.hero15 p,
+.hero.hero15 blockquote {
+  color: #fff;
+  max-width: 600px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Remove blockquote border and padding */
+.hero.hero15 blockquote {
+  border-left: none;
+  padding-left: 0;
+}
+
+/* Responsive: Stack vertically on small screens */
+@media (width <= 900px) {
+  .hero.hero15 {
+    flex-direction: column;
+    min-height: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero.hero15 > div:first-child,
+  .hero.hero15 > div:last-child {
+    flex: 1 1 100%;
+    width: 100%;
+    min-height: 300px;
+  }
+
+  .hero.hero15 > div:last-child > div {
+    padding: 32px 16px;
+    max-width: 100%;
+  }
+
+  .hero.hero15 h2,
+  .hero.hero15 p,
+  .hero.hero15 blockquote {
+    max-width: 100%;
+  }
+
+  .hero.hero15 > div:first-child img {
+    width: 100%;
+    min-width: 100%;
   }
 }
