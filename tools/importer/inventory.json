@@ -686,22 +686,6 @@
       ]
     },
     {
-      "name": "header",
-      "cluster": 19,
-      "source": "Header",
-      "target": "Header (header19)",
-      "key": "header19",
-      "instances": [
-        {
-          "url": "https://articles.nrma.com.au/bruce-highway/index.html",
-          "urlHash": "0281bd1a9434a8a6897ce8c1cae0f303e8dec5b8",
-          "uuid": "0281bd1a-00-596805f6d73c34f49fe400e2e9d08547d11ac319",
-          "xpath": "/html[1]/body[1]/article[1]/header[1]",
-          "section": "section-1"
-        }
-      ]
-    },
-    {
       "name": "Cards (no images)",
       "cluster": 20,
       "source": "Cards",
@@ -975,6 +959,19 @@
           "uuid": "5f0e6b6c-00-daeb64d7ab993cf4f30e276a6fc344d925189444",
           "xpath": "/html[1]/body[1]/article[1]/header[1]/div[1]/div[1]",
           "section": "section-2"
+        }
+      ]
+    },
+    {
+      "name": "Hero",
+      "cluster": 33,
+      "instances": [
+        {
+          "url": "https://articles.nrma.com.au/bruce-highway/index.html",
+          "urlHash": "0281bd1a9434a8a6897ce8c1cae0f303e8dec5b8",
+          "uuid": "0281bd1a-00-596805f6d73c34f49fe400e2e9d08547d11ac319",
+          "xpath": "/html[1]/body[1]/article[1]/header[1]",
+          "section": "section-1"
         }
       ]
     }
