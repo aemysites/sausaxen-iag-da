@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity */
 .cards > ul {
   list-style: none;
   margin: 0;
@@ -99,7 +100,6 @@
   padding: 20px 0 16px;
 }
 
-/* Use grid, align cards near top for compact layout */
 .cards.cards5 > ul {
   display: grid;
   grid-template-columns: repeat(4, minmax(260px, 1fr));
@@ -111,7 +111,6 @@
   background: #fff;
 }
 
-/* Responsive: 2 columns at medium, 1 column at small screens */
 @media (width <= 1100px) {
   .cards.cards5 > ul {
     grid-template-columns: repeat(2, minmax(240px, 1fr));
@@ -126,7 +125,6 @@
   }
 }
 
-/* Each card: slightly reduced vertical padding for a compact block; width balanced */
 .cards.cards5 > ul > li {
   background: #fff;
   border: none;
@@ -141,7 +139,6 @@
   justify-content: flex-start;
 }
 
-/* Logo area: Make logos large, minimal space below for tight rhythm */
 .cards.cards5 .cards-card-image {
   display: flex;
   justify-content: center;
@@ -161,7 +158,6 @@
   border: none;
 }
 
-/* Card body: vertical layout, centered alignment */
 .cards.cards5 .cards-card-body {
   display: flex;
   flex-direction: column;
@@ -180,7 +176,6 @@
   padding: 0;
 }
 
-/* Button wrapper: center horizontally, no extra margin */
 .cards.cards5 .cards-card-body > .button-container {
   display: flex;
   justify-content: center;
@@ -189,7 +184,6 @@
   padding: 0;
 }
 
-/* Button: deep blue, rectangular, slightly rounded corners */
 .cards.cards5 .cards-card-body .button {
   background: #002977;
   color: #fff;
@@ -204,7 +198,7 @@
   transition: background 0.2s;
   line-height: 1.25;
   white-space: nowrap;
-  border-radius: 5px; /* override pill from global styles */
+  border-radius: 5px;
 }
 
 .cards.cards5 .cards-card-body .button:hover,
@@ -213,7 +207,185 @@
   color: #fff;
 }
 
-/* Remove bottom margin for last element in card */
 .cards.cards5 > ul > li > *:last-child {
   margin-bottom: 0;
+}
+
+
+.cards.cards9 {
+  background: #fff;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 32px 0;
+  box-sizing: border-box;
+}
+
+/* Grid: 3 columns desktop, stacking on small screens */
+.cards.cards9 > ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  border: none; /* Remove any unwanted borders */
+}
+
+/* Remove any extra border at the bottom of the grid */
+.cards.cards9 > ul > li {
+  border-bottom: none;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background: #fff;
+  border-right: 1px solid #ececec;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+@media (width <= 900px) {
+  .cards.cards9 > ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card container: vertical dividers, flex column for content stacking */
+
+.cards.cards9 > ul > li:last-child {
+  border-right: none;
+}
+
+/* Stack .cards-card-body children vertically within each card */
+.cards.cards9 > ul > li > .cards-card-body {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
+}
+
+/* Video area: only the FIRST .cards-card-body in each card gets video styles */
+.cards.cards9 > ul > li > .cards-card-body:first-child {
+  aspect-ratio: 16 / 9;
+  background-color: #222;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Add thumbnail images for each video area (replace URLs as needed) */
+.cards.cards9 > ul > li:nth-child(1) > .cards-card-body:first-child {
+  background-image: url('/assets/fire-thumb.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.cards.cards9 > ul > li:nth-child(2) > .cards-card-body:first-child {
+  background-image: url('/assets/flood-thumb.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.cards.cards9 > ul > li:nth-child(3) > .cards-card-body:first-child {
+  background-image: url('/assets/heat-thumb.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Play button overlay: center and show only for the video area */
+.cards.cards9 > ul > li > .cards-card-body:first-child .button-container .button {
+  width: 56px;
+  height: 56px;
+  background: rgb(20 20 20 / 55%);
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+  border: none;
+  text-indent: -9999px;
+  box-shadow: 0 2px 8px 0 rgb(0 0 0 / 10%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Play triangle (pseudo-element) */
+.cards.cards9 > ul > li > .cards-card-body:first-child .button-container .button::before {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-40%, -50%);
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 18px solid #fff;
+  content: "";
+}
+
+/* Card content section: only NON-FIRST .cards-card-body in each card gets padding/text style */
+.cards.cards9 > ul > li > .cards-card-body:not(:first-child) {
+  padding: 32px 36px 36px;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Spacing between video area and title: tighter */
+.cards.cards9 > ul > li > .cards-card-body:not(:first-child) h3 {
+  color: #1A237E;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 12px;
+  margin-bottom: 14px;
+  line-height: 1.2;
+}
+
+/* Card description: balanced color/spacing */
+.cards.cards9 > ul > li > .cards-card-body:not(:first-child) p {
+  color: #283593;
+  font-size: 15px;
+  font-weight: normal;
+  text-align: center;
+  margin: 0;
+  line-height: 1.6;
+  max-width: 100%;
+}
+
+/* Remove default margin from ul and li within block */
+.cards.cards9 ul,
+.cards.cards9 ul > li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Responsive: add vertical spacing between cards when stacked */
+@media (width <= 900px) {
+  .cards.cards9 > ul > li {
+    border-right: none;
+    border-bottom: 1px solid #ececec;
+    margin-bottom: 24px;
+  }
+
+  .cards.cards9 > ul > li:last-child {
+    border-bottom: none;
+  }
 }
