@@ -249,7 +249,6 @@
   min-height: 100vh;
 }
 
-/* Main cream hero block, centered and not full-bleed */
 .hero.hero7 {
   background: #FFF9F4;
   margin: 0;
@@ -266,7 +265,6 @@
   min-height: 0;
 }
 
-/* Two columns side by side */
 .hero.hero7 > div {
   display: flex;
   flex-direction: row;
@@ -276,7 +274,6 @@
   gap: 56px;
 }
 
-/* Left column (text) */
 .hero.hero7 > div:first-child {
   flex: 0 1 275px;
   display: flex;
@@ -291,7 +288,6 @@
   box-sizing: border-box;
 }
 
-/* Right column (image) */
 .hero.hero7 > div:last-child {
   flex: 1 1 0%;
   display: flex;
@@ -316,7 +312,6 @@
   margin: 0;
 }
 
-/* Headings and text appearance */
 .hero.hero7 h1,
 .hero.hero7 h2,
 .hero.hero7 h3,
@@ -331,7 +326,6 @@
   background: none;
 }
 
-/* Responsive: stack columns and adjust spacing on small screens */
 @media (width <= 900px) {
   .hero.hero7 {
     max-width: 98vw;
@@ -375,5 +369,111 @@
     min-width: 0;
     padding: 0;
     width: 100%;
+  }
+}
+
+
+.hero.hero12 {
+  background: #f9b29e;
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  position: relative;
+
+  /* Prevent collapse if empty */
+  min-width: 1px;
+}
+
+/* Ensure all direct children stack vertically and take full width */
+.hero.hero12 > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 0;
+}
+
+/* Force nested structures to stack and center (up to 4 deep just in case) */
+.hero.hero12 > div > div,
+.hero.hero12 > div > div > div,
+.hero.hero12 > div > div > div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Add vertical spacing between stacked elements, except last */
+.hero.hero12 > div > div > *:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+/* Styling for badge/logo (picture and image) */
+.hero.hero12 picture,
+.hero.hero12 img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 120px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Headings: bold, large, navy, centered */
+.hero.hero12 h1,
+.hero.hero12 h2,
+.hero.hero12 h3 {
+  color: #0c1e56;
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 0 16px;
+  line-height: 1.1;
+  text-align: center;
+}
+
+/* Paragraph: navy, center, spacing */
+.hero.hero12 p {
+  color: #0c1e56;
+  font-size: 1rem;
+  margin: 0 0 24px;
+  line-height: 1.5;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Down arrow or last element: spacing, navy, center */
+.hero.hero12 > div > div > *:last-child {
+  color: #0c1e56;
+  font-size: 2rem;
+  margin-top: 32px;
+  text-align: center;
+}
+
+/* Ensure icons are navy */
+.hero.hero12 svg {
+  fill: #0c1e56;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Responsive: scale down on smaller screens */
+@media (width <= 700px) {
+  .hero.hero12 h1,
+  .hero.hero12 h2,
+  .hero.hero12 h3 {
+    font-size: 2rem;
+  }
+
+  .hero.hero12 picture,
+  .hero.hero12 img {
+    width: 72px;
   }
 }
