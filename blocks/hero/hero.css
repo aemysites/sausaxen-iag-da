@@ -1132,7 +1132,6 @@
   justify-content: flex-start;
 }
 
-/* Background image covers hero block */
 .hero.hero33 > div:first-child {
   position: absolute;
   inset: 0;
@@ -1150,7 +1149,6 @@
   display: block;
 }
 
-/* Overlay: darkens lower half of hero */
 .hero.hero33::before {
   position: absolute;
   left: 0; right: 0; bottom: 0;
@@ -1162,7 +1160,6 @@
   content: "";
 }
 
-/* Content block: stacked vertically, left-aligned, in lower left quadrant */
 .hero.hero33 > div:last-child {
   position: relative;
   z-index: 3;
@@ -1178,7 +1175,6 @@
   box-sizing: border-box;
 }
 
-/* Responsive padding for smaller screens */
 @media (width <= 900px) {
   .hero.hero33 > div:last-child {
     max-width: 100vw;
@@ -1202,18 +1198,15 @@
   gap: 0.7em;
 }
 
-/* Logo/support row: flex row, left-aligned, spacing tight */
 .hero.hero33 > div:last-child > div > p {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   align-items: center;
   gap: 16px;
   margin-bottom: 0.3em;
   width: 100%;
-  flex-wrap: wrap;
 }
 
-/* Only the logo/support row should be flex row, others stack */
 .hero.hero33 > div:last-child > div > p:not(:last-child) {
   margin-bottom: 0.3em;
 }
@@ -1224,7 +1217,6 @@
   margin-bottom: 0;
 }
 
-/* Logo sizing for visual balance */
 .hero.hero33 > div:last-child > div > p picture,
 .hero.hero33 > div:last-child > div > p img {
   height: 32px;
@@ -1232,7 +1224,6 @@
   display: block;
 }
 
-/* Support text styling */
 .hero.hero33 > div:last-child > div > p span,
 .hero.hero33 > div:last-child > div > p {
   font-size: 1.05rem;
@@ -1242,7 +1233,6 @@
   text-align: left;
 }
 
-/* Divider between logo and text (visible only in logo/support row) */
 .hero.hero33 > div:last-child > div > p:last-child > *:nth-child(2) {
   border-left: 2px solid #fff;
   height: 32px;
@@ -1250,7 +1240,6 @@
   padding-left: 14px;
 }
 
-/* Heading: large, bold, lines stacked closely */
 .hero.hero33 h1 {
   font-size: 3.1rem;
   font-weight: 800;
@@ -1273,22 +1262,185 @@
   text-align: left;
 }
 
-/* Heading is stacked vertically after logo row */
 .hero.hero33 > div:last-child > div > h1 {
   margin-top: 0.25em;
   margin-bottom: 0.2em;
 }
 
-/* Broken images: hide if empty src or error */
 .hero.hero33 img[src="about:error"] {
   display: none;
 }
-
-/* Prevent content from stretching or overflowing */
 
 @media (width >= 1600px) {
   .hero.hero33 > div:last-child {
     max-width: 700px;
     padding-left: 10vw;
+  }
+}
+
+
+.hero.hero34 {
+  background: #D19B88;
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  /* Shift block slightly higher for more authentic hero feel */
+  padding-top: 8vh;
+  padding-bottom: 10vh;
+}
+
+.hero.hero34 > div {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Logo block (first div) */
+.hero.hero34 > div:first-child {
+  margin-bottom: 36px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero.hero34 > div:first-child picture,
+.hero.hero34 > div:first-child img {
+  display: block;
+  margin: 0 auto;
+  max-width: 180px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Add margin between stacked images in logo block if more than one image */
+.hero.hero34 > div:first-child picture + picture,
+.hero.hero34 > div:first-child img + img,
+.hero.hero34 > div:first-child picture + img,
+.hero.hero34 > div:first-child img + picture {
+  margin-top: 18px;
+}
+
+/* Content block (second div) */
+.hero.hero34 > div:last-child {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero.hero34 > div:last-child > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Lifeline logo row: force third <p> inside second div to be a horizontal flex row */
+.hero.hero34 > div:last-child > div > p:nth-child(3) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 10px;
+  margin-bottom: 32px;
+  width: 100%;
+}
+
+/* Lifeline row logo sizing */
+.hero.hero34 > div:last-child > div > p:nth-child(3) picture,
+.hero.hero34 > div:last-child > div > p:nth-child(3) img {
+  max-width: 44px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Heading styling */
+.hero.hero34 h1,
+.hero.hero34 h2,
+.hero.hero34 h3 {
+  color: #111852;
+  font-weight: 700;
+  text-align: center;
+  font-size: 2.3rem;
+  margin: 36px 0 32px;
+  line-height: 1.1;
+  max-width: 600px;
+}
+
+/* Button container and button styling */
+.hero.hero34 .button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.hero.hero34 .button {
+  background: #111852;
+  color: #fff;
+  font-size: 1.07rem;
+  font-weight: 600;
+  border-radius: 7px;
+  padding: 14px 44px;
+  margin-top: 0;
+  border: none;
+  box-shadow: none;
+  transition: background 0.2s;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.hero.hero34 .button:hover,
+.hero.hero34 .button:focus {
+  background: #222e6f;
+}
+
+/* Responsiveness */
+@media (width <= 600px) {
+  .hero.hero34 > div {
+    max-width: 98vw;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .hero.hero34 h1,
+  .hero.hero34 h2,
+  .hero.hero34 h3 {
+    font-size: 1.3rem;
+    margin: 18px 0 10px;
+  }
+
+  .hero.hero34 > div:first-child picture,
+  .hero.hero34 > div:first-child img {
+    max-width: 110px;
+  }
+
+  .hero.hero34 > div:last-child > div > p:nth-child(3) picture,
+  .hero.hero34 > div:last-child > div > p:nth-child(3) img {
+    max-width: 28px;
+  }
+
+  .hero.hero34 .button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (width <= 400px) {
+  .hero.hero34 > div:first-child {
+    margin-bottom: 14px;
   }
 }
