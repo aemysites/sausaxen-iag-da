@@ -866,22 +866,6 @@
       ]
     },
     {
-      "name": "header",
-      "cluster": 27,
-      "source": "Header",
-      "target": "Header (header27)",
-      "key": "header27",
-      "instances": [
-        {
-          "url": "https://articles.nrma.com.au/wearandtear/index.html",
-          "urlHash": "55a6497a8f973b5e377d20376332a4a679648058",
-          "uuid": "55a6497a-00-596805f6d73c34f49fe400e2e9d08547d11ac319",
-          "xpath": "/html[1]/body[1]/article[1]/header[1]",
-          "section": "section-1"
-        }
-      ]
-    },
-    {
       "name": "Video",
       "cluster": 28,
       "instances": [
@@ -969,6 +953,19 @@
           "uuid": "c19779ed-00-596805f6d73c34f49fe400e2e9d08547d11ac319",
           "xpath": "/html[1]/body[1]/article[1]/header[1]",
           "section": "section-2"
+        }
+      ]
+    },
+    {
+      "name": "Hero",
+      "cluster": 35,
+      "instances": [
+        {
+          "url": "https://articles.nrma.com.au/wearandtear/index.html",
+          "urlHash": "55a6497a8f973b5e377d20376332a4a679648058",
+          "uuid": "55a6497a-00-596805f6d73c34f49fe400e2e9d08547d11ac319",
+          "xpath": "/html[1]/body[1]/article[1]/header[1]",
+          "section": "section-1"
         }
       ]
     }
