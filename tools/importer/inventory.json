@@ -1,0 +1,1441 @@
+{
+  "fragments": [
+    {
+      "name": "nav",
+      "path": "/nav",
+      "totalBoxes": 1,
+      "instances": [
+        {
+          "url": "https://articles.nrma.com.au/bruce-highway/index.html",
+          "urlHash": "0281bd1a9434a8a6897ce8c1cae0f303e8dec5b8",
+          "uuid": "0281bd1a-00-6e70765a003047818ea5700b557b8d01b43078df",
+          "xpath": "/html[1]/body[1]/div[1]"
+        },
+        {
+          "url": "https://articles.nrma.com.au/nrmaboating/index.html",
+          "urlHash": "186c6de3ce6c238a0597cd0cee647ec801de0f50",
+          "uuid": "186c6de3-00-6e70765a003047818ea5700b557b8d01b43078df",
+          "xpath": "/html[1]/body[1]/div[1]"
+        },
+        {
+          "url": "https://articles.nrma.com.au/helpnation/index.html",
+          "urlHash": "3f6bfd14b9ae4a0ddc358acceb7b6ee893af1984",
+          "uuid": "3f6bfd14-00-6e70765a003047818ea5700b557b8d01b43078df",
+          "xpath": "/html[1]/body[1]/div[1]"
+        },
+        {
+          "url": "https://articles.nrma.com.au/help-always/index.html",
+          "urlHash": "509a59fe74da21c77ed657e941f6b09b07e2b3b3",
+          "uuid": "509a59fe-00-6e70765a003047818ea5700b557b8d01b43078df",
+          "xpath": "/html[1]/body[1]/div[1]"
+        },
+        {
+          "url": "https://articles.nrma.com.au/wearandtear/index.html",
+          "urlHash": "55a6497a8f973b5e377d20376332a4a679648058",
+          "uuid": "55a6497a-00-6e70765a003047818ea5700b557b8d01b43078df",
+          "xpath": "/html[1]/body[1]/div[1]"
+        },
+        {
+          "url": "https://articles.nrma.com.au/help-nation-wild-weather-tracker/",
+          "urlHash": "5f0e6b6c56351966769d2fb95d147b596c1bc583",
+          "uuid": "5f0e6b6c-00-6e70765a003047818ea5700b557b8d01b43078df",
+          "xpath": "/html[1]/body[1]/div[1]"
+        },
+        {
+          "url": "https://articles.nrma.com.au/the-knowledge-keepers/index.html",
+          "urlHash": "bae287ca3dc78600c99cb6298b4914c2a2b38c08",
+          "uuid": "bae287ca-00-6e70765a003047818ea5700b557b8d01b43078df",
+          "xpath": "/html[1]/body[1]/div[1]"
+        },
+        {
+          "url": "https://articles.nrma.com.au/help-nation-support-toolkit/",
+          "urlHash": "c19779ed7841077cb93f6b8250baa77eec0abba9",
+          "uuid": "c19779ed-00-6e70765a003047818ea5700b557b8d01b43078df",
+          "xpath": "/html[1]/body[1]/div[1]"
+        },
+        {
+          "url": "https://articles.nrma.com.au/nrmaboat/index.html",
+          "urlHash": "e383823235d56aab941e1002aba185344de9f6b0",
+          "uuid": "e3838232-00-6e70765a003047818ea5700b557b8d01b43078df",
+          "xpath": "/html[1]/body[1]/div[1]"
+        }
+      ],
+      "styles": {
+        "height": 60,
+        "background": "rgb(0, 51, 141) none repeat scroll 0% 0% / auto padding-box border-box"
+      }
+    },
+    {
+      "name": "footer",
+      "path": "/footer",
+      "totalBoxes": 1,
+      "instances": [
+        {
+          "url": "https://articles.nrma.com.au/bruce-highway/index.html",
+          "urlHash": "0281bd1a9434a8a6897ce8c1cae0f303e8dec5b8",
+          "uuid": "0281bd1a-16-26de46ad86dc36e4461d300885d5b37e2dc7cb3b",
+          "xpath": "/html[1]/body[1]/article[1]/div[19]"
+        },
+        {
+          "url": "https://articles.nrma.com.au/nrmaboating/index.html",
+          "urlHash": "186c6de3ce6c238a0597cd0cee647ec801de0f50",
+          "uuid": "186c6de3-27-11a1827746d5450b8e6d38c5b23f491c71c0007c",
+          "xpath": "/html[1]/body[1]/article[1]/section[6]"
+        },
+        {
+          "url": "https://articles.nrma.com.au/helpnation/index.html",
+          "urlHash": "3f6bfd14b9ae4a0ddc358acceb7b6ee893af1984",
+          "uuid": "3f6bfd14-16-788bb7eabc20b3e5db8ba2783945dce335f3d1e1",
+          "xpath": "/html[1]/body[1]/article[1]/section[6]/div[2]"
+        },
+        {
+          "url": "https://articles.nrma.com.au/help-always/index.html",
+          "urlHash": "509a59fe74da21c77ed657e941f6b09b07e2b3b3",
+          "uuid": "509a59fe-06-d7bfde68055889d282ce6fb417881faa43735dcb",
+          "xpath": "/html[1]/body[1]/article[1]/section[4]/div[2]"
+        },
+        {
+          "url": "https://articles.nrma.com.au/wearandtear/index.html",
+          "urlHash": "55a6497a8f973b5e377d20376332a4a679648058",
+          "uuid": "55a6497a-21-7f1372b453767b23845eb737a87ced727f825da3",
+          "xpath": "/html[1]/body[1]/article[1]/div[16]"
+        },
+        {
+          "url": "https://articles.nrma.com.au/help-nation-wild-weather-tracker/",
+          "urlHash": "5f0e6b6c56351966769d2fb95d147b596c1bc583",
+          "uuid": "5f0e6b6c-08-4a55f519de9d1dc617df281497661cde9fca7791",
+          "xpath": "/html[1]/body[1]/article[1]/section[1]/div[3]"
+        },
+        {
+          "url": "https://articles.nrma.com.au/the-knowledge-keepers/index.html",
+          "urlHash": "bae287ca3dc78600c99cb6298b4914c2a2b38c08",
+          "uuid": "bae287ca-07-3625755b3bd2a0e5a5d5ed5a3b96c100d4ff4225",
+          "xpath": "/html[1]/body[1]/article[1]/div[5]"
+        },
+        {
+          "url": "https://articles.nrma.com.au/help-nation-support-toolkit/",
+          "urlHash": "c19779ed7841077cb93f6b8250baa77eec0abba9",
+          "uuid": "c19779ed-07-37a6d9257ddb552baa55672d8c8b595e7518eabf",
+          "xpath": "/html[1]/body[1]/article[1]/div[4]"
+        },
+        {
+          "url": "https://articles.nrma.com.au/nrmaboat/index.html",
+          "urlHash": "e383823235d56aab941e1002aba185344de9f6b0",
+          "uuid": "e3838232-27-11a1827746d5450b8e6d38c5b23f491c71c0007c",
+          "xpath": "/html[1]/body[1]/article[1]/section[6]"
+        }
+      ],
+      "styles": {
+        "background": "rgb(19, 18, 40) none repeat scroll 0% 0% / auto padding-box border-box"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Hero",
+      "cluster": 1,
+      "source": "Hero",
+      "target": "Hero (hero1)",
+      "key": "hero1",
+      "instances": [
+        {
+          "url": "https://articles.nrma.com.au/nrmaboating/index.html",
+          "urlHash": "186c6de3ce6c238a0597cd0cee647ec801de0f50",
+          "uuid": "186c6de3-01-596805f6d73c34f49fe400e2e9d08547d11ac319",
+          "xpath": "/html[1]/body[1]/article[1]/header[1]",
+          "section": "section-2"
+        },
+        {
+          "url": "https://articles.nrma.com.au/nrmaboat/index.html",
+          "urlHash": "e383823235d56aab941e1002aba185344de9f6b0",
+          "uuid": "e3838232-01-596805f6d73c34f49fe400e2e9d08547d11ac319",
+          "xpath": "/html[1]/body[1]/article[1]/header[1]",
+          "section": "section-2"
+        }
+      ]
+    },
+    {
+      "name": "Hero",
+      "cluster": 2,
+      "source": "Hero",
+      "target": "Hero (hero2)",
+      "key": "hero2",
+      "instances": [
+        {
+          "url": "https://articles.nrma.com.au/help-nation-support-toolkit/",
+          "urlHash": "c19779ed7841077cb93f6b8250baa77eec0abba9",
+          "uuid": "c19779ed-01-596805f6d73c34f49fe400e2e9d08547d11ac319",
+          "xpath": "/html[1]/body[1]/article[1]/header[1]",
+          "section": "section-2"
+        }
+      ]
+    },
+    {
+      "name": "Cards",
+      "cluster": 3,
+      "source": "Cards",
+      "target": "Cards (cards3)",
+      "key": "cards3",
+      "instances": [
+        {
+          "url": "https://articles.nrma.com.au/bruce-highway/index.html",
+          "urlHash": "0281bd1a9434a8a6897ce8c1cae0f303e8dec5b8",
+          "uuid": "0281bd1a-15-07c5a74824f62ba659091fa0d1f3ce556f0f92f1",
+          "xpath": "/html[1]/body[1]/article[1]/div[18]",
+          "section": "section-1"
+        },
+        {
+          "url": "https://articles.nrma.com.au/wearandtear/index.html",
+          "urlHash": "55a6497a8f973b5e377d20376332a4a679648058",
+          "uuid": "55a6497a-03-5ea2acaf7d1b26aaa559a2cc3cffbc0796b43145",
+          "xpath": "/html[1]/body[1]/article[1]/div[2]",
+          "section": "section-6"
+        }
+      ]
+    },
+    {
+      "name": "Hero",
+      "cluster": 4,
+      "source": "Hero",
+      "target": "Hero (hero4)",
+      "key": "hero4",
+      "instances": [
+        {
+          "url": "https://articles.nrma.com.au/nrmaboating/index.html",
+          "urlHash": "186c6de3ce6c238a0597cd0cee647ec801de0f50",
+          "uuid": "186c6de3-16-69f2739cd5b26a3672b9dbc9c149a5e34eaf5e6f",
+          "xpath": "/html[1]/body[1]/article[1]/section[5]/div[1]",
+          "section": "section-2"
+        },
+        {
+          "url": "https://articles.nrma.com.au/nrmaboating/index.html",
+          "urlHash": "186c6de3ce6c238a0597cd0cee647ec801de0f50",
+          "uuid": "186c6de3-17-91bce4a9e325f593ed43d792d480910a7f81b4d7",
+          "xpath": "/html[1]/body[1]/article[1]/section[5]/div[2]",
+          "section": "section-2"
+        },
+        {
+          "url": "https://articles.nrma.com.au/nrmaboating/index.html",
+          "urlHash": "186c6de3ce6c238a0597cd0cee647ec801de0f50",
+          "uuid": "186c6de3-18-07d4cded69ec8afd8c94e3fe90edc308c203eb83",
+          "xpath": "/html[1]/body[1]/article[1]/section[5]/div[3]",
+          "section": "section-2"
+        },
+        {
+          "url": "https://articles.nrma.com.au/nrmaboating/index.html",
+          "urlHash": "186c6de3ce6c238a0597cd0cee647ec801de0f50",
+          "uuid": "186c6de3-19-c0137cc33b2df3ac4432cb52b91b8b6bb121c12b",
+          "xpath": "/html[1]/body[1]/article[1]/section[5]/div[4]",
+          "section": "section-2"
+        },
+        {
+          "url": "https://articles.nrma.com.au/nrmaboating/index.html",
+          "urlHash": "186c6de3ce6c238a0597cd0cee647ec801de0f50",
+          "uuid": "186c6de3-20-70450465f42b5be1b1a28512f75fcc8f4df3ec1c",
+          "xpath": "/html[1]/body[1]/article[1]/section[5]/div[5]",
+          "section": "section-2"
+        },
+        {
+          "url": "https://articles.nrma.com.au/nrmaboating/index.html",
+          "urlHash": "186c6de3ce6c238a0597cd0cee647ec801de0f50",
+          "uuid": "186c6de3-21-df5abb2ade4afdbdb922b2c55373cff392144615",
+          "xpath": "/html[1]/body[1]/article[1]/section[5]/div[6]",
+          "section": "section-2"
+        },
+        {
+          "url": "https://articles.nrma.com.au/nrmaboating/index.html",
+          "urlHash": "186c6de3ce6c238a0597cd0cee647ec801de0f50",
+          "uuid": "186c6de3-22-80e7856ce61435cad9203ea7299b938b80dabe72",
+          "xpath": "/html[1]/body[1]/article[1]/section[5]/div[7]",
+          "section": "section-2"
+        },
+        {
+          "url": "https://articles.nrma.com.au/nrmaboating/index.html",
+          "urlHash": "186c6de3ce6c238a0597cd0cee647ec801de0f50",
+          "uuid": "186c6de3-23-a24e0e2ec6b7e16ec60b648d7d3bbeb8d4ad113e",
+          "xpath": "/html[1]/body[1]/article[1]/section[5]/div[8]",
+          "section": "section-2"
+        },
+        {
+          "url": "https://articles.nrma.com.au/nrmaboating/index.html",
+          "urlHash": "186c6de3ce6c238a0597cd0cee647ec801de0f50",
+          "uuid": "186c6de3-24-a59eab428afe863b518223a3571d0adef3acebc1",
+          "xpath": "/html[1]/body[1]/article[1]/section[5]/div[9]",
+          "section": "section-2"
+        },
+        {
+          "url": "https://articles.nrma.com.au/nrmaboating/index.html",
+          "urlHash": "186c6de3ce6c238a0597cd0cee647ec801de0f50",
+          "uuid": "186c6de3-25-c2a51c1d947f9b49d5f1ecb33670dea3a3659a69",
+          "xpath": "/html[1]/body[1]/article[1]/section[5]/div[10]",
+          "section": "section-2"
+        },
+        {
+          "url": "https://articles.nrma.com.au/nrmaboating/index.html",
+          "urlHash": "186c6de3ce6c238a0597cd0cee647ec801de0f50",
+          "uuid": "186c6de3-26-4d7bf7500534da5de5dd523756a1148fa4ca8c04",
+          "xpath": "/html[1]/body[1]/article[1]/section[5]/div[11]",
+          "section": "section-2"
+        },
+        {
+          "url": "https://articles.nrma.com.au/help-always/index.html",
+          "urlHash": "509a59fe74da21c77ed657e941f6b09b07e2b3b3",
+          "uuid": "509a59fe-06-d7bfde68055889d282ce6fb417881faa43735dcb",
+          "xpath": "/html[1]/body[1]/article[1]/section[4]/div[2]",
+          "section": "section-5"
+        },
+        {
+          "url": "https://articles.nrma.com.au/nrmaboat/index.html",
+          "urlHash": "e383823235d56aab941e1002aba185344de9f6b0",
+          "uuid": "e3838232-06-9f2ca37789281cbb420abf1af2439ed0af4ab7a9",
+          "xpath": "/html[1]/body[1]/article[1]/section[2]/div[2]",
+          "section": "section-2"
+        },
+        {
+          "url": "https://articles.nrma.com.au/nrmaboat/index.html",
+          "urlHash": "e383823235d56aab941e1002aba185344de9f6b0",
+          "uuid": "e3838232-08-e92cb62e09f2a05be75729aded28bfe581e8cd16",
+          "xpath": "/html[1]/body[1]/article[1]/section[2]/div[4]",
+          "section": "section-2"
+        },
+        {
+          "url": "https://articles.nrma.com.au/nrmaboat/index.html",
+          "urlHash": "e383823235d56aab941e1002aba185344de9f6b0",
+          "uuid": "e3838232-10-9f2b98d0cec24cb1ada1abd9816e9cd8c2f313e3",
+          "xpath": "/html[1]/body[1]/article[1]/section[3]/div[1]",
+          "section": "section-2"
+        },
+        {
+          "url": "https://articles.nrma.com.au/nrmaboat/index.html",
+          "urlHash": "e383823235d56aab941e1002aba185344de9f6b0",
+          "uuid": "e3838232-13-4e917de6c10c87be9c2770aad06a9681de1c43f0",
+          "xpath": "/html[1]/body[1]/article[1]/section[4]/div[1]",
+          "section": "section-2"
+        },
+        {
+          "url": "https://articles.nrma.com.au/nrmaboat/index.html",
+          "urlHash": "e383823235d56aab941e1002aba185344de9f6b0",
+          "uuid": "e3838232-16-69f2739cd5b26a3672b9dbc9c149a5e34eaf5e6f",
+          "xpath": "/html[1]/body[1]/article[1]/section[5]/div[1]",
+          "section": "section-2"
+        },
+        {
+          "url": "https://articles.nrma.com.au/nrmaboat/index.html",
+          "urlHash": "e383823235d56aab941e1002aba185344de9f6b0",
+          "uuid": "e3838232-17-91bce4a9e325f593ed43d792d480910a7f81b4d7",
+          "xpath": "/html[1]/body[1]/article[1]/section[5]/div[2]",
+          "section": "section-2"
+        },
+        {
+          "url": "https://articles.nrma.com.au/nrmaboat/index.html",
+          "urlHash": "e383823235d56aab941e1002aba185344de9f6b0",
+          "uuid": "e3838232-18-07d4cded69ec8afd8c94e3fe90edc308c203eb83",
+          "xpath": "/html[1]/body[1]/article[1]/section[5]/div[3]",
+          "section": "section-2"
+        },
+        {
+          "url": "https://articles.nrma.com.au/nrmaboat/index.html",
+          "urlHash": "e383823235d56aab941e1002aba185344de9f6b0",
+          "uuid": "e3838232-19-c0137cc33b2df3ac4432cb52b91b8b6bb121c12b",
+          "xpath": "/html[1]/body[1]/article[1]/section[5]/div[4]",
+          "section": "section-2"
+        },
+        {
+          "url": "https://articles.nrma.com.au/nrmaboat/index.html",
+          "urlHash": "e383823235d56aab941e1002aba185344de9f6b0",
+          "uuid": "e3838232-20-70450465f42b5be1b1a28512f75fcc8f4df3ec1c",
+          "xpath": "/html[1]/body[1]/article[1]/section[5]/div[5]",
+          "section": "section-2"
+        },
+        {
+          "url": "https://articles.nrma.com.au/nrmaboat/index.html",
+          "urlHash": "e383823235d56aab941e1002aba185344de9f6b0",
+          "uuid": "e3838232-21-df5abb2ade4afdbdb922b2c55373cff392144615",
+          "xpath": "/html[1]/body[1]/article[1]/section[5]/div[6]",
+          "section": "section-2"
+        },
+        {
+          "url": "https://articles.nrma.com.au/nrmaboat/index.html",
+          "urlHash": "e383823235d56aab941e1002aba185344de9f6b0",
+          "uuid": "e3838232-22-80e7856ce61435cad9203ea7299b938b80dabe72",
+          "xpath": "/html[1]/body[1]/article[1]/section[5]/div[7]",
+          "section": "section-2"
+        },
+        {
+          "url": "https://articles.nrma.com.au/nrmaboat/index.html",
+          "urlHash": "e383823235d56aab941e1002aba185344de9f6b0",
+          "uuid": "e3838232-23-a24e0e2ec6b7e16ec60b648d7d3bbeb8d4ad113e",
+          "xpath": "/html[1]/body[1]/article[1]/section[5]/div[8]",
+          "section": "section-2"
+        },
+        {
+          "url": "https://articles.nrma.com.au/nrmaboat/index.html",
+          "urlHash": "e383823235d56aab941e1002aba185344de9f6b0",
+          "uuid": "e3838232-24-a59eab428afe863b518223a3571d0adef3acebc1",
+          "xpath": "/html[1]/body[1]/article[1]/section[5]/div[9]",
+          "section": "section-2"
+        },
+        {
+          "url": "https://articles.nrma.com.au/nrmaboat/index.html",
+          "urlHash": "e383823235d56aab941e1002aba185344de9f6b0",
+          "uuid": "e3838232-25-c2a51c1d947f9b49d5f1ecb33670dea3a3659a69",
+          "xpath": "/html[1]/body[1]/article[1]/section[5]/div[10]",
+          "section": "section-2"
+        },
+        {
+          "url": "https://articles.nrma.com.au/nrmaboat/index.html",
+          "urlHash": "e383823235d56aab941e1002aba185344de9f6b0",
+          "uuid": "e3838232-26-4d7bf7500534da5de5dd523756a1148fa4ca8c04",
+          "xpath": "/html[1]/body[1]/article[1]/section[5]/div[11]",
+          "section": "section-2"
+        }
+      ]
+    },
+    {
+      "name": "Hero",
+      "cluster": 5,
+      "source": "Hero",
+      "target": "Hero (hero5)",
+      "key": "hero5",
+      "instances": [
+        {
+          "url": "https://articles.nrma.com.au/helpnation/index.html",
+          "urlHash": "3f6bfd14b9ae4a0ddc358acceb7b6ee893af1984",
+          "uuid": "3f6bfd14-06-9f2ca37789281cbb420abf1af2439ed0af4ab7a9",
+          "xpath": "/html[1]/body[1]/article[1]/section[2]/div[2]",
+          "section": "section-2"
+        },
+        {
+          "url": "https://articles.nrma.com.au/nrmaboat/index.html",
+          "urlHash": "e383823235d56aab941e1002aba185344de9f6b0",
+          "uuid": "e3838232-14-d7bfde68055889d282ce6fb417881faa43735dcb",
+          "xpath": "/html[1]/body[1]/article[1]/section[4]/div[2]",
+          "section": "section-2"
+        },
+        {
+          "url": "https://articles.nrma.com.au/nrmaboat/index.html",
+          "urlHash": "e383823235d56aab941e1002aba185344de9f6b0",
+          "uuid": "e3838232-15-c58deede052365623d226656da7d238585033ea6",
+          "xpath": "/html[1]/body[1]/article[1]/section[4]/div[3]",
+          "section": "section-2"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 6,
+      "source": "Columns block",
+      "target": "Columns block (columns6)",
+      "key": "columns6",
+      "instances": [
+        {
+          "url": "https://articles.nrma.com.au/wearandtear/index.html",
+          "urlHash": "55a6497a8f973b5e377d20376332a4a679648058",
+          "uuid": "55a6497a-09-a7d774d013324f895e8864ea090d3cbc76867608",
+          "xpath": "/html[1]/body[1]/article[1]/div[7]",
+          "section": "section-8"
+        },
+        {
+          "url": "https://articles.nrma.com.au/wearandtear/index.html",
+          "urlHash": "55a6497a8f973b5e377d20376332a4a679648058",
+          "uuid": "55a6497a-13-84bddec4419d396d4dc965e37df2342028b454b0",
+          "xpath": "/html[1]/body[1]/article[1]/div[10]",
+          "section": "section-8"
+        },
+        {
+          "url": "https://articles.nrma.com.au/wearandtear/index.html",
+          "urlHash": "55a6497a8f973b5e377d20376332a4a679648058",
+          "uuid": "55a6497a-17-8e4b6579c4cef86e4515a1230dab0e13b0c1b261",
+          "xpath": "/html[1]/body[1]/article[1]/div[13]",
+          "section": "section-8"
+        }
+      ]
+    },
+    {
+      "name": "Cards",
+      "cluster": 7,
+      "source": "Cards",
+      "target": "Cards (cards7)",
+      "key": "cards7",
+      "instances": [
+        {
+          "url": "https://articles.nrma.com.au/the-knowledge-keepers/index.html",
+          "urlHash": "bae287ca3dc78600c99cb6298b4914c2a2b38c08",
+          "uuid": "bae287ca-05-958ac185f0f7fd1d8275666b5d9515cd71c57f27",
+          "xpath": "/html[1]/body[1]/article[1]/div[3]/div[1]/div[1]/div[2]",
+          "section": "section-6"
+        }
+      ]
+    },
+    {
+      "name": "header",
+      "cluster": 8,
+      "source": "Header",
+      "target": "Header (header8)",
+      "key": "header8",
+      "instances": [
+        {
+          "url": "https://articles.nrma.com.au/nrmaboating/index.html",
+          "urlHash": "186c6de3ce6c238a0597cd0cee647ec801de0f50",
+          "uuid": "186c6de3-00-6e70765a003047818ea5700b557b8d01b43078df",
+          "xpath": "/html[1]/body[1]/div[1]",
+          "section": "section-3"
+        },
+        {
+          "url": "https://articles.nrma.com.au/help-always/index.html",
+          "urlHash": "509a59fe74da21c77ed657e941f6b09b07e2b3b3",
+          "uuid": "509a59fe-00-6e70765a003047818ea5700b557b8d01b43078df",
+          "xpath": "/html[1]/body[1]/div[1]",
+          "section": "section-3"
+        },
+        {
+          "url": "https://articles.nrma.com.au/help-nation-wild-weather-tracker/",
+          "urlHash": "5f0e6b6c56351966769d2fb95d147b596c1bc583",
+          "uuid": "5f0e6b6c-00-6e70765a003047818ea5700b557b8d01b43078df",
+          "xpath": "/html[1]/body[1]/div[1]",
+          "section": "section-1"
+        },
+        {
+          "url": "https://articles.nrma.com.au/nrmaboat/index.html",
+          "urlHash": "e383823235d56aab941e1002aba185344de9f6b0",
+          "uuid": "e3838232-00-6e70765a003047818ea5700b557b8d01b43078df",
+          "xpath": "/html[1]/body[1]/div[1]",
+          "section": "section-3"
+        }
+      ]
+    },
+    {
+      "name": "Cards",
+      "cluster": 9,
+      "source": "Cards",
+      "target": "Cards (cards9)",
+      "key": "cards9",
+      "instances": [
+        {
+          "url": "https://articles.nrma.com.au/helpnation/index.html",
+          "urlHash": "3f6bfd14b9ae4a0ddc358acceb7b6ee893af1984",
+          "uuid": "3f6bfd14-04-d03834c39bd9baae27bc4dfe7cd4726f6985c887",
+          "xpath": "/html[1]/body[1]/article[1]/section[1]/div[2]/div[1]/div[1]/div[2]",
+          "section": "section-6"
+        },
+        {
+          "url": "https://articles.nrma.com.au/helpnation/index.html",
+          "urlHash": "3f6bfd14b9ae4a0ddc358acceb7b6ee893af1984",
+          "uuid": "3f6bfd14-15-49f734c41bf05b2392a80698c667e92a626c21f1",
+          "xpath": "/html[1]/body[1]/article[1]/section[6]/div[1]/div[1]/div[1]/div[2]",
+          "section": "section-6"
+        },
+        {
+          "url": "https://articles.nrma.com.au/wearandtear/index.html",
+          "urlHash": "55a6497a8f973b5e377d20376332a4a679648058",
+          "uuid": "55a6497a-19-8300d2c927e76e69af30f2ccb070b5de2d78b6d2",
+          "xpath": "/html[1]/body[1]/article[1]/div[14]/div[1]/div[1]/div[2]",
+          "section": "section-6"
+        }
+      ]
+    },
+    {
+      "name": "Cards",
+      "cluster": 10,
+      "source": "Cards",
+      "target": "Cards (cards10)",
+      "key": "cards10",
+      "instances": [
+        {
+          "url": "https://articles.nrma.com.au/helpnation/index.html",
+          "urlHash": "3f6bfd14b9ae4a0ddc358acceb7b6ee893af1984",
+          "uuid": "3f6bfd14-09-227340f71f59813606fae95bf7fa2acad6f28c28",
+          "xpath": "/html[1]/body[1]/article[1]/section[3]/div[2]/div[1]/div[1]/div[2]",
+          "section": "section-1"
+        },
+        {
+          "url": "https://articles.nrma.com.au/help-nation-wild-weather-tracker/",
+          "urlHash": "5f0e6b6c56351966769d2fb95d147b596c1bc583",
+          "uuid": "5f0e6b6c-06-d03834c39bd9baae27bc4dfe7cd4726f6985c887",
+          "xpath": "/html[1]/body[1]/article[1]/section[1]/div[2]/div[1]/div[1]/div[2]",
+          "section": "section-7"
+        },
+        {
+          "url": "https://articles.nrma.com.au/help-nation-support-toolkit/",
+          "urlHash": "c19779ed7841077cb93f6b8250baa77eec0abba9",
+          "uuid": "c19779ed-05-958ac185f0f7fd1d8275666b5d9515cd71c57f27",
+          "xpath": "/html[1]/body[1]/article[1]/div[3]/div[1]/div[1]/div[2]",
+          "section": "section-7"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 11,
+      "source": "Columns block",
+      "target": "Columns block (columns11)",
+      "key": "columns11",
+      "instances": [
+        {
+          "url": "https://articles.nrma.com.au/wearandtear/index.html",
+          "urlHash": "55a6497a8f973b5e377d20376332a4a679648058",
+          "uuid": "55a6497a-08-e593375936fe0083f6fb2c3b472f28cd048041bc",
+          "xpath": "/html[1]/body[1]/article[1]/div[6]",
+          "section": "section-6"
+        },
+        {
+          "url": "https://articles.nrma.com.au/wearandtear/index.html",
+          "urlHash": "55a6497a8f973b5e377d20376332a4a679648058",
+          "uuid": "55a6497a-12-bcda74e14f2cbcab021002411c06cda192b7c911",
+          "xpath": "/html[1]/body[1]/article[1]/div[9]",
+          "section": "section-6"
+        },
+        {
+          "url": "https://articles.nrma.com.au/wearandtear/index.html",
+          "urlHash": "55a6497a8f973b5e377d20376332a4a679648058",
+          "uuid": "55a6497a-16-922a59f95d252add2e0c0422e3eaa545f6a3adb7",
+          "xpath": "/html[1]/body[1]/article[1]/div[12]",
+          "section": "section-6"
+        }
+      ]
+    },
+    {
+      "name": "Video",
+      "cluster": 12,
+      "source": "Video",
+      "target": "Video (video12)",
+      "key": "video12",
+      "instances": [
+        {
+          "url": "https://articles.nrma.com.au/nrmaboating/index.html",
+          "urlHash": "186c6de3ce6c238a0597cd0cee647ec801de0f50",
+          "uuid": "186c6de3-07-e92cb62e09f2a05be75729aded28bfe581e8cd16",
+          "xpath": "/html[1]/body[1]/article[1]/section[2]/div[4]",
+          "section": "section-5"
+        }
+      ]
+    },
+    {
+      "name": "Hero",
+      "cluster": 13,
+      "source": "Hero",
+      "target": "Hero (hero13)",
+      "key": "hero13",
+      "instances": [
+        {
+          "url": "https://articles.nrma.com.au/the-knowledge-keepers/index.html",
+          "urlHash": "bae287ca3dc78600c99cb6298b4914c2a2b38c08",
+          "uuid": "bae287ca-02-ffbb3fd68da63c0f77ffcaf78231494872ddbde9",
+          "xpath": "/html[1]/body[1]/article[1]/div[1]",
+          "section": "section-2"
+        }
+      ]
+    },
+    {
+      "name": "Hero",
+      "cluster": 14,
+      "source": "Hero",
+      "target": "Hero (hero14)",
+      "key": "hero14",
+      "instances": [
+        {
+          "url": "https://articles.nrma.com.au/help-nation-wild-weather-tracker/",
+          "urlHash": "5f0e6b6c56351966769d2fb95d147b596c1bc583",
+          "uuid": "5f0e6b6c-03-4dd7639c9df789001866dbb75743e81726ebeb60",
+          "xpath": "/html[1]/body[1]/article[1]/header[1]/div[2]",
+          "section": "section-2"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 15,
+      "source": "Columns block",
+      "target": "Columns block (columns15)",
+      "key": "columns15",
+      "instances": [
+        {
+          "url": "https://articles.nrma.com.au/helpnation/index.html",
+          "urlHash": "3f6bfd14b9ae4a0ddc358acceb7b6ee893af1984",
+          "uuid": "3f6bfd14-02-f0997e1305ae50dfd83340ecebfc126abd9b57e0",
+          "xpath": "/html[1]/body[1]/article[1]/section[1]/div[1]",
+          "section": "section-6"
+        }
+      ]
+    },
+    {
+      "name": "Hero",
+      "cluster": 16,
+      "source": "Hero",
+      "target": "Hero (hero16)",
+      "key": "hero16",
+      "instances": [
+        {
+          "url": "https://articles.nrma.com.au/nrmaboating/index.html",
+          "urlHash": "186c6de3ce6c238a0597cd0cee647ec801de0f50",
+          "uuid": "186c6de3-02-a62fee5db919a5bee341ed59d7ffff3b08bd3960",
+          "xpath": "/html[1]/body[1]/article[1]/section[1]",
+          "section": "section-2"
+        }
+      ]
+    },
+    {
+      "name": "Hero",
+      "cluster": 17,
+      "source": "Hero",
+      "target": "Hero (hero17)",
+      "key": "hero17",
+      "instances": [
+        {
+          "url": "https://articles.nrma.com.au/nrmaboating/index.html",
+          "urlHash": "186c6de3ce6c238a0597cd0cee647ec801de0f50",
+          "uuid": "186c6de3-14-d7bfde68055889d282ce6fb417881faa43735dcb",
+          "xpath": "/html[1]/body[1]/article[1]/section[4]/div[2]",
+          "section": "section-2"
+        },
+        {
+          "url": "https://articles.nrma.com.au/nrmaboating/index.html",
+          "urlHash": "186c6de3ce6c238a0597cd0cee647ec801de0f50",
+          "uuid": "186c6de3-15-c58deede052365623d226656da7d238585033ea6",
+          "xpath": "/html[1]/body[1]/article[1]/section[4]/div[3]",
+          "section": "section-2"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 18,
+      "source": "Columns block",
+      "target": "Columns block (columns18)",
+      "key": "columns18",
+      "instances": [
+        {
+          "url": "https://articles.nrma.com.au/help-nation-support-toolkit/",
+          "urlHash": "c19779ed7841077cb93f6b8250baa77eec0abba9",
+          "uuid": "c19779ed-02-ffbb3fd68da63c0f77ffcaf78231494872ddbde9",
+          "xpath": "/html[1]/body[1]/article[1]/div[1]",
+          "section": "section-1"
+        }
+      ]
+    },
+    {
+      "name": "Hero",
+      "cluster": 19,
+      "source": "Hero",
+      "target": "Hero (hero19)",
+      "key": "hero19",
+      "instances": [
+        {
+          "url": "https://articles.nrma.com.au/nrmaboat/index.html",
+          "urlHash": "e383823235d56aab941e1002aba185344de9f6b0",
+          "uuid": "e3838232-02-f0997e1305ae50dfd83340ecebfc126abd9b57e0",
+          "xpath": "/html[1]/body[1]/article[1]/section[1]/div[1]",
+          "section": "section-2"
+        }
+      ]
+    },
+    {
+      "name": "Hero",
+      "cluster": 20,
+      "source": "Hero",
+      "target": "Hero (hero20)",
+      "key": "hero20",
+      "instances": [
+        {
+          "url": "https://articles.nrma.com.au/bruce-highway/index.html",
+          "urlHash": "0281bd1a9434a8a6897ce8c1cae0f303e8dec5b8",
+          "uuid": "0281bd1a-01-596805f6d73c34f49fe400e2e9d08547d11ac319",
+          "xpath": "/html[1]/body[1]/article[1]/header[1]",
+          "section": "section-1"
+        }
+      ]
+    },
+    {
+      "name": "unknown",
+      "cluster": 21,
+      "instances": [
+        {
+          "url": "https://articles.nrma.com.au/nrmaboating/index.html",
+          "urlHash": "186c6de3ce6c238a0597cd0cee647ec801de0f50",
+          "uuid": "186c6de3-04-6dbbb8b47cc959ef0e5219a3ba9cf16513b23936",
+          "xpath": "/html[1]/body[1]/article[1]/section[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]",
+          "section": "section-4"
+        },
+        {
+          "url": "https://articles.nrma.com.au/nrmaboating/index.html",
+          "urlHash": "186c6de3ce6c238a0597cd0cee647ec801de0f50",
+          "uuid": "186c6de3-11-0695f315370d7dcce9f0ef4f8e05939f29154bd5",
+          "xpath": "/html[1]/body[1]/article[1]/section[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]",
+          "section": "section-4"
+        },
+        {
+          "url": "https://articles.nrma.com.au/nrmaboat/index.html",
+          "urlHash": "e383823235d56aab941e1002aba185344de9f6b0",
+          "uuid": "e3838232-04-dc68de0c58e1f780a1bd602e419940f0d66f0241",
+          "xpath": "/html[1]/body[1]/article[1]/section[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]",
+          "section": "section-4"
+        },
+        {
+          "url": "https://articles.nrma.com.au/nrmaboat/index.html",
+          "urlHash": "e383823235d56aab941e1002aba185344de9f6b0",
+          "uuid": "e3838232-11-36b23ba64016ffa66a75625fec88035f9be163be",
+          "xpath": "/html[1]/body[1]/article[1]/section[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]",
+          "section": "section-4"
+        }
+      ]
+    },
+    {
+      "name": "Hero",
+      "cluster": 22,
+      "source": "Hero",
+      "target": "Hero (hero22)",
+      "key": "hero22",
+      "instances": [
+        {
+          "url": "https://articles.nrma.com.au/help-always/index.html",
+          "urlHash": "509a59fe74da21c77ed657e941f6b09b07e2b3b3",
+          "uuid": "509a59fe-01-596805f6d73c34f49fe400e2e9d08547d11ac319",
+          "xpath": "/html[1]/body[1]/article[1]/header[1]",
+          "section": "section-2"
+        }
+      ]
+    },
+    {
+      "name": "Hero",
+      "cluster": 23,
+      "source": "Hero",
+      "target": "Hero (hero23)",
+      "key": "hero23",
+      "instances": [
+        {
+          "url": "https://articles.nrma.com.au/helpnation/index.html",
+          "urlHash": "3f6bfd14b9ae4a0ddc358acceb7b6ee893af1984",
+          "uuid": "3f6bfd14-05-77e4ce01f79dfdab8cfe70a735499608848f7263",
+          "xpath": "/html[1]/body[1]/article[1]/section[2]/div[1]",
+          "section": "section-2"
+        },
+        {
+          "url": "https://articles.nrma.com.au/helpnation/index.html",
+          "urlHash": "3f6bfd14b9ae4a0ddc358acceb7b6ee893af1984",
+          "uuid": "3f6bfd14-07-9f2b98d0cec24cb1ada1abd9816e9cd8c2f313e3",
+          "xpath": "/html[1]/body[1]/article[1]/section[3]/div[1]",
+          "section": "section-2"
+        },
+        {
+          "url": "https://articles.nrma.com.au/helpnation/index.html",
+          "urlHash": "3f6bfd14b9ae4a0ddc358acceb7b6ee893af1984",
+          "uuid": "3f6bfd14-10-4e917de6c10c87be9c2770aad06a9681de1c43f0",
+          "xpath": "/html[1]/body[1]/article[1]/section[4]/div[1]",
+          "section": "section-2"
+        },
+        {
+          "url": "https://articles.nrma.com.au/helpnation/index.html",
+          "urlHash": "3f6bfd14b9ae4a0ddc358acceb7b6ee893af1984",
+          "uuid": "3f6bfd14-12-69f2739cd5b26a3672b9dbc9c149a5e34eaf5e6f",
+          "xpath": "/html[1]/body[1]/article[1]/section[5]/div[1]",
+          "section": "section-2"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 24,
+      "source": "Columns block",
+      "target": "Columns block (columns24)",
+      "key": "columns24",
+      "instances": [
+        {
+          "url": "https://articles.nrma.com.au/helpnation/index.html",
+          "urlHash": "3f6bfd14b9ae4a0ddc358acceb7b6ee893af1984",
+          "uuid": "3f6bfd14-11-d7bfde68055889d282ce6fb417881faa43735dcb",
+          "xpath": "/html[1]/body[1]/article[1]/section[4]/div[2]",
+          "section": "section-7"
+        }
+      ]
+    },
+    {
+      "name": "Hero",
+      "cluster": 25,
+      "source": "Hero",
+      "target": "Hero (hero25)",
+      "key": "hero25",
+      "instances": [
+        {
+          "url": "https://articles.nrma.com.au/bruce-highway/index.html",
+          "urlHash": "0281bd1a9434a8a6897ce8c1cae0f303e8dec5b8",
+          "uuid": "0281bd1a-02-ffbb3fd68da63c0f77ffcaf78231494872ddbde9",
+          "xpath": "/html[1]/body[1]/article[1]/div[1]",
+          "section": "section-1"
+        },
+        {
+          "url": "https://articles.nrma.com.au/bruce-highway/index.html",
+          "urlHash": "0281bd1a9434a8a6897ce8c1cae0f303e8dec5b8",
+          "uuid": "0281bd1a-03-5ea2acaf7d1b26aaa559a2cc3cffbc0796b43145",
+          "xpath": "/html[1]/body[1]/article[1]/div[2]",
+          "section": "section-1"
+        },
+        {
+          "url": "https://articles.nrma.com.au/bruce-highway/index.html",
+          "urlHash": "0281bd1a9434a8a6897ce8c1cae0f303e8dec5b8",
+          "uuid": "0281bd1a-05-37a6d9257ddb552baa55672d8c8b595e7518eabf",
+          "xpath": "/html[1]/body[1]/article[1]/div[4]",
+          "section": "section-1"
+        },
+        {
+          "url": "https://articles.nrma.com.au/nrmaboating/index.html",
+          "urlHash": "186c6de3ce6c238a0597cd0cee647ec801de0f50",
+          "uuid": "186c6de3-08-cf3855580c7c468ba06dd43a689a07619ec3c5d5",
+          "xpath": "/html[1]/body[1]/article[1]/section[2]/div[5]",
+          "section": "section-2"
+        },
+        {
+          "url": "https://articles.nrma.com.au/nrmaboating/index.html",
+          "urlHash": "186c6de3ce6c238a0597cd0cee647ec801de0f50",
+          "uuid": "186c6de3-10-9f2b98d0cec24cb1ada1abd9816e9cd8c2f313e3",
+          "xpath": "/html[1]/body[1]/article[1]/section[3]/div[1]",
+          "section": "section-2"
+        },
+        {
+          "url": "https://articles.nrma.com.au/nrmaboating/index.html",
+          "urlHash": "186c6de3ce6c238a0597cd0cee647ec801de0f50",
+          "uuid": "186c6de3-13-4e917de6c10c87be9c2770aad06a9681de1c43f0",
+          "xpath": "/html[1]/body[1]/article[1]/section[4]/div[1]",
+          "section": "section-2"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 26,
+      "source": "Columns block",
+      "target": "Columns block (columns26)",
+      "key": "columns26",
+      "instances": [
+        {
+          "url": "https://articles.nrma.com.au/helpnation/index.html",
+          "urlHash": "3f6bfd14b9ae4a0ddc358acceb7b6ee893af1984",
+          "uuid": "3f6bfd14-13-91bce4a9e325f593ed43d792d480910a7f81b4d7",
+          "xpath": "/html[1]/body[1]/article[1]/section[5]/div[2]",
+          "section": "section-1"
+        }
+      ]
+    },
+    {
+      "name": "Hero",
+      "cluster": 27,
+      "source": "Hero",
+      "target": "Hero (hero27)",
+      "key": "hero27",
+      "instances": [
+        {
+          "url": "https://articles.nrma.com.au/the-knowledge-keepers/index.html",
+          "urlHash": "bae287ca3dc78600c99cb6298b4914c2a2b38c08",
+          "uuid": "bae287ca-01-596805f6d73c34f49fe400e2e9d08547d11ac319",
+          "xpath": "/html[1]/body[1]/article[1]/header[1]",
+          "section": "section-9"
+        }
+      ]
+    },
+    {
+      "name": "Hero",
+      "cluster": 28,
+      "source": "Hero",
+      "target": "Hero (hero28)",
+      "key": "hero28",
+      "instances": [
+        {
+          "url": "https://articles.nrma.com.au/wearandtear/index.html",
+          "urlHash": "55a6497a8f973b5e377d20376332a4a679648058",
+          "uuid": "55a6497a-01-596805f6d73c34f49fe400e2e9d08547d11ac319",
+          "xpath": "/html[1]/body[1]/article[1]/header[1]",
+          "section": "section-1"
+        }
+      ]
+    }
+  ],
+  "outliers": [
+    {
+      "url": "https://articles.nrma.com.au/bruce-highway/index.html",
+      "urlHash": "0281bd1a9434a8a6897ce8c1cae0f303e8dec5b8",
+      "uuid": "0281bd1a-00-6e70765a003047818ea5700b557b8d01b43078df",
+      "xpath": "/html[1]/body[1]/div[1]",
+      "section": "section-1"
+    },
+    {
+      "url": "https://articles.nrma.com.au/bruce-highway/index.html",
+      "urlHash": "0281bd1a9434a8a6897ce8c1cae0f303e8dec5b8",
+      "uuid": "0281bd1a-04-854e37a534a9c0c60d87c705474f42b76e0c0a6a",
+      "xpath": "/html[1]/body[1]/article[1]/div[3]",
+      "section": "section-2"
+    },
+    {
+      "url": "https://articles.nrma.com.au/bruce-highway/index.html",
+      "urlHash": "0281bd1a9434a8a6897ce8c1cae0f303e8dec5b8",
+      "uuid": "0281bd1a-06-e593375936fe0083f6fb2c3b472f28cd048041bc",
+      "xpath": "/html[1]/body[1]/article[1]/div[6]",
+      "section": "section-2"
+    },
+    {
+      "url": "https://articles.nrma.com.au/bruce-highway/index.html",
+      "urlHash": "0281bd1a9434a8a6897ce8c1cae0f303e8dec5b8",
+      "uuid": "0281bd1a-07-a7d774d013324f895e8864ea090d3cbc76867608",
+      "xpath": "/html[1]/body[1]/article[1]/div[7]",
+      "section": "section-1"
+    },
+    {
+      "url": "https://articles.nrma.com.au/bruce-highway/index.html",
+      "urlHash": "0281bd1a9434a8a6897ce8c1cae0f303e8dec5b8",
+      "uuid": "0281bd1a-08-889c9c2ede18901a56fe43533b856755a056547c",
+      "xpath": "/html[1]/body[1]/article[1]/div[8]",
+      "section": "section-2"
+    },
+    {
+      "url": "https://articles.nrma.com.au/bruce-highway/index.html",
+      "urlHash": "0281bd1a9434a8a6897ce8c1cae0f303e8dec5b8",
+      "uuid": "0281bd1a-09-bcda74e14f2cbcab021002411c06cda192b7c911",
+      "xpath": "/html[1]/body[1]/article[1]/div[9]",
+      "section": "section-1"
+    },
+    {
+      "url": "https://articles.nrma.com.au/bruce-highway/index.html",
+      "urlHash": "0281bd1a9434a8a6897ce8c1cae0f303e8dec5b8",
+      "uuid": "0281bd1a-10-d83c09c62a91720754d04d4445af27050498cef9",
+      "xpath": "/html[1]/body[1]/article[1]/div[11]",
+      "section": "section-2"
+    },
+    {
+      "url": "https://articles.nrma.com.au/bruce-highway/index.html",
+      "urlHash": "0281bd1a9434a8a6897ce8c1cae0f303e8dec5b8",
+      "uuid": "0281bd1a-11-922a59f95d252add2e0c0422e3eaa545f6a3adb7",
+      "xpath": "/html[1]/body[1]/article[1]/div[12]",
+      "section": "section-1"
+    },
+    {
+      "url": "https://articles.nrma.com.au/bruce-highway/index.html",
+      "urlHash": "0281bd1a9434a8a6897ce8c1cae0f303e8dec5b8",
+      "uuid": "0281bd1a-12-834414349874fe43c4864fff9c2a50f0e129ea2c",
+      "xpath": "/html[1]/body[1]/article[1]/div[14]",
+      "section": "section-2"
+    },
+    {
+      "url": "https://articles.nrma.com.au/bruce-highway/index.html",
+      "urlHash": "0281bd1a9434a8a6897ce8c1cae0f303e8dec5b8",
+      "uuid": "0281bd1a-13-a7bc277f32e6d6174a587cc153cb2b091790cc90",
+      "xpath": "/html[1]/body[1]/article[1]/div[15]",
+      "section": "section-1"
+    },
+    {
+      "url": "https://articles.nrma.com.au/bruce-highway/index.html",
+      "urlHash": "0281bd1a9434a8a6897ce8c1cae0f303e8dec5b8",
+      "uuid": "0281bd1a-14-a13dca4285c2d0acfddc95a580348d68732ec57f",
+      "xpath": "/html[1]/body[1]/article[1]/div[17]",
+      "section": "section-1"
+    },
+    {
+      "url": "https://articles.nrma.com.au/bruce-highway/index.html",
+      "urlHash": "0281bd1a9434a8a6897ce8c1cae0f303e8dec5b8",
+      "uuid": "0281bd1a-16-26de46ad86dc36e4461d300885d5b37e2dc7cb3b",
+      "xpath": "/html[1]/body[1]/article[1]/div[19]",
+      "section": "section-1"
+    },
+    {
+      "url": "https://articles.nrma.com.au/nrmaboating/index.html",
+      "urlHash": "186c6de3ce6c238a0597cd0cee647ec801de0f50",
+      "uuid": "186c6de3-03-77e4ce01f79dfdab8cfe70a735499608848f7263",
+      "xpath": "/html[1]/body[1]/article[1]/section[2]/div[1]",
+      "section": "section-2"
+    },
+    {
+      "url": "https://articles.nrma.com.au/nrmaboating/index.html",
+      "urlHash": "186c6de3ce6c238a0597cd0cee647ec801de0f50",
+      "uuid": "186c6de3-05-23b16dec7abcdc8d6503f6dc7f4b787074289abc",
+      "xpath": "/html[1]/body[1]/article[1]/section[2]/div[2]/div[2]",
+      "section": "section-2"
+    },
+    {
+      "url": "https://articles.nrma.com.au/nrmaboating/index.html",
+      "urlHash": "186c6de3ce6c238a0597cd0cee647ec801de0f50",
+      "uuid": "186c6de3-06-464ca7a6aba917cfa3ee37f09581c257560e7145",
+      "xpath": "/html[1]/body[1]/article[1]/section[2]/div[3]",
+      "section": "section-2"
+    },
+    {
+      "url": "https://articles.nrma.com.au/nrmaboating/index.html",
+      "urlHash": "186c6de3ce6c238a0597cd0cee647ec801de0f50",
+      "uuid": "186c6de3-09-17c9b485175df29cd2e6747ef3dc81f124219b16",
+      "xpath": "/html[1]/body[1]/article[1]/section[2]/div[6]",
+      "section": "section-2"
+    },
+    {
+      "url": "https://articles.nrma.com.au/nrmaboating/index.html",
+      "urlHash": "186c6de3ce6c238a0597cd0cee647ec801de0f50",
+      "uuid": "186c6de3-12-5182bdaf8eba49eac866698f65053273edd7fd9a",
+      "xpath": "/html[1]/body[1]/article[1]/section[3]/div[2]/div[2]",
+      "section": "section-2"
+    },
+    {
+      "url": "https://articles.nrma.com.au/nrmaboating/index.html",
+      "urlHash": "186c6de3ce6c238a0597cd0cee647ec801de0f50",
+      "uuid": "186c6de3-27-11a1827746d5450b8e6d38c5b23f491c71c0007c",
+      "xpath": "/html[1]/body[1]/article[1]/section[6]",
+      "section": "section-2"
+    },
+    {
+      "url": "https://articles.nrma.com.au/helpnation/index.html",
+      "urlHash": "3f6bfd14b9ae4a0ddc358acceb7b6ee893af1984",
+      "uuid": "3f6bfd14-00-6e70765a003047818ea5700b557b8d01b43078df",
+      "xpath": "/html[1]/body[1]/div[1]",
+      "section": "section-1"
+    },
+    {
+      "url": "https://articles.nrma.com.au/helpnation/index.html",
+      "urlHash": "3f6bfd14b9ae4a0ddc358acceb7b6ee893af1984",
+      "uuid": "3f6bfd14-01-596805f6d73c34f49fe400e2e9d08547d11ac319",
+      "xpath": "/html[1]/body[1]/article[1]/header[1]",
+      "section": "section-1"
+    },
+    {
+      "url": "https://articles.nrma.com.au/helpnation/index.html",
+      "urlHash": "3f6bfd14b9ae4a0ddc358acceb7b6ee893af1984",
+      "uuid": "3f6bfd14-03-157c3d5cd4cb46fecba58e20553591dec971a6b3",
+      "xpath": "/html[1]/body[1]/article[1]/section[1]/div[2]/div[1]/div[1]/div[1]",
+      "section": "section-6"
+    },
+    {
+      "url": "https://articles.nrma.com.au/helpnation/index.html",
+      "urlHash": "3f6bfd14b9ae4a0ddc358acceb7b6ee893af1984",
+      "uuid": "3f6bfd14-08-3159b191755d347cf64f9ac8cf0912862ac1254c",
+      "xpath": "/html[1]/body[1]/article[1]/section[3]/div[2]/div[1]/div[1]/div[1]",
+      "section": "section-1"
+    },
+    {
+      "url": "https://articles.nrma.com.au/helpnation/index.html",
+      "urlHash": "3f6bfd14b9ae4a0ddc358acceb7b6ee893af1984",
+      "uuid": "3f6bfd14-14-7eab26ede60be95ddeae09e446446f76500354a7",
+      "xpath": "/html[1]/body[1]/article[1]/section[6]/div[1]/div[1]/div[1]/div[1]",
+      "section": "section-6"
+    },
+    {
+      "url": "https://articles.nrma.com.au/helpnation/index.html",
+      "urlHash": "3f6bfd14b9ae4a0ddc358acceb7b6ee893af1984",
+      "uuid": "3f6bfd14-16-788bb7eabc20b3e5db8ba2783945dce335f3d1e1",
+      "xpath": "/html[1]/body[1]/article[1]/section[6]/div[2]",
+      "section": "section-1"
+    },
+    {
+      "url": "https://articles.nrma.com.au/help-always/index.html",
+      "urlHash": "509a59fe74da21c77ed657e941f6b09b07e2b3b3",
+      "uuid": "509a59fe-02-a62fee5db919a5bee341ed59d7ffff3b08bd3960",
+      "xpath": "/html[1]/body[1]/article[1]/section[1]",
+      "section": "section-6"
+    },
+    {
+      "url": "https://articles.nrma.com.au/help-always/index.html",
+      "urlHash": "509a59fe74da21c77ed657e941f6b09b07e2b3b3",
+      "uuid": "509a59fe-03-c370ab4451083b5347b2c2bfb2dc51b3eb225a24",
+      "xpath": "/html[1]/body[1]/article[1]/section[2]",
+      "section": "section-2"
+    },
+    {
+      "url": "https://articles.nrma.com.au/help-always/index.html",
+      "urlHash": "509a59fe74da21c77ed657e941f6b09b07e2b3b3",
+      "uuid": "509a59fe-04-fbbb9bf2c871a7e05e3bc1d8910549492c06d7c5",
+      "xpath": "/html[1]/body[1]/article[1]/section[3]",
+      "section": "section-2"
+    },
+    {
+      "url": "https://articles.nrma.com.au/help-always/index.html",
+      "urlHash": "509a59fe74da21c77ed657e941f6b09b07e2b3b3",
+      "uuid": "509a59fe-05-4e917de6c10c87be9c2770aad06a9681de1c43f0",
+      "xpath": "/html[1]/body[1]/article[1]/section[4]/div[1]",
+      "section": "section-2"
+    },
+    {
+      "url": "https://articles.nrma.com.au/wearandtear/index.html",
+      "urlHash": "55a6497a8f973b5e377d20376332a4a679648058",
+      "uuid": "55a6497a-00-6e70765a003047818ea5700b557b8d01b43078df",
+      "xpath": "/html[1]/body[1]/div[1]",
+      "section": "section-1"
+    },
+    {
+      "url": "https://articles.nrma.com.au/wearandtear/index.html",
+      "urlHash": "55a6497a8f973b5e377d20376332a4a679648058",
+      "uuid": "55a6497a-02-ffbb3fd68da63c0f77ffcaf78231494872ddbde9",
+      "xpath": "/html[1]/body[1]/article[1]/div[1]",
+      "section": "section-6"
+    },
+    {
+      "url": "https://articles.nrma.com.au/wearandtear/index.html",
+      "urlHash": "55a6497a8f973b5e377d20376332a4a679648058",
+      "uuid": "55a6497a-04-854e37a534a9c0c60d87c705474f42b76e0c0a6a",
+      "xpath": "/html[1]/body[1]/article[1]/div[3]",
+      "section": "section-8"
+    },
+    {
+      "url": "https://articles.nrma.com.au/wearandtear/index.html",
+      "urlHash": "55a6497a8f973b5e377d20376332a4a679648058",
+      "uuid": "55a6497a-05-37a6d9257ddb552baa55672d8c8b595e7518eabf",
+      "xpath": "/html[1]/body[1]/article[1]/div[4]",
+      "section": "section-1"
+    },
+    {
+      "url": "https://articles.nrma.com.au/wearandtear/index.html",
+      "urlHash": "55a6497a8f973b5e377d20376332a4a679648058",
+      "uuid": "55a6497a-06-efba9c4516d739ebe41ae29b56dc1a825f890a7d",
+      "xpath": "/html[1]/body[1]/article[1]/div[5]/div[1]/div[1]/div[1]",
+      "section": "section-1"
+    },
+    {
+      "url": "https://articles.nrma.com.au/wearandtear/index.html",
+      "urlHash": "55a6497a8f973b5e377d20376332a4a679648058",
+      "uuid": "55a6497a-07-fd7bc1ee50c58b4d7d2d341e3a6d7db002bd5f5b",
+      "xpath": "/html[1]/body[1]/article[1]/div[5]/div[2]",
+      "section": "section-1"
+    },
+    {
+      "url": "https://articles.nrma.com.au/wearandtear/index.html",
+      "urlHash": "55a6497a8f973b5e377d20376332a4a679648058",
+      "uuid": "55a6497a-10-3151c346dd5af761917ba8ff8ba40a7ed7758ba1",
+      "xpath": "/html[1]/body[1]/article[1]/div[8]/div[1]/div[1]/div[1]",
+      "section": "section-1"
+    },
+    {
+      "url": "https://articles.nrma.com.au/wearandtear/index.html",
+      "urlHash": "55a6497a8f973b5e377d20376332a4a679648058",
+      "uuid": "55a6497a-11-e325803318f053bb838bb3dc80ef5dcc6883f27b",
+      "xpath": "/html[1]/body[1]/article[1]/div[8]/div[2]",
+      "section": "section-1"
+    },
+    {
+      "url": "https://articles.nrma.com.au/wearandtear/index.html",
+      "urlHash": "55a6497a8f973b5e377d20376332a4a679648058",
+      "uuid": "55a6497a-14-a07ca3ca992476811a001f9ddf2b3d1e95f013c7",
+      "xpath": "/html[1]/body[1]/article[1]/div[11]/div[1]/div[1]/div[1]",
+      "section": "section-1"
+    },
+    {
+      "url": "https://articles.nrma.com.au/wearandtear/index.html",
+      "urlHash": "55a6497a8f973b5e377d20376332a4a679648058",
+      "uuid": "55a6497a-15-79c9f533128e2b4e49a0e5cd3e0ee9b6054307dd",
+      "xpath": "/html[1]/body[1]/article[1]/div[11]/div[2]",
+      "section": "section-1"
+    },
+    {
+      "url": "https://articles.nrma.com.au/wearandtear/index.html",
+      "urlHash": "55a6497a8f973b5e377d20376332a4a679648058",
+      "uuid": "55a6497a-18-5e586ddfeb76e0c177c42d0f8666c5055cd9a29d",
+      "xpath": "/html[1]/body[1]/article[1]/div[14]/div[1]/div[1]/div[1]",
+      "section": "section-6"
+    },
+    {
+      "url": "https://articles.nrma.com.au/wearandtear/index.html",
+      "urlHash": "55a6497a8f973b5e377d20376332a4a679648058",
+      "uuid": "55a6497a-20-a7bc277f32e6d6174a587cc153cb2b091790cc90",
+      "xpath": "/html[1]/body[1]/article[1]/div[15]",
+      "section": "section-6"
+    },
+    {
+      "url": "https://articles.nrma.com.au/wearandtear/index.html",
+      "urlHash": "55a6497a8f973b5e377d20376332a4a679648058",
+      "uuid": "55a6497a-21-7f1372b453767b23845eb737a87ced727f825da3",
+      "xpath": "/html[1]/body[1]/article[1]/div[16]",
+      "section": "section-2"
+    },
+    {
+      "url": "https://articles.nrma.com.au/help-nation-wild-weather-tracker/",
+      "urlHash": "5f0e6b6c56351966769d2fb95d147b596c1bc583",
+      "uuid": "5f0e6b6c-01-daeb64d7ab993cf4f30e276a6fc344d925189444",
+      "xpath": "/html[1]/body[1]/article[1]/header[1]/div[1]/div[1]",
+      "section": "section-2"
+    },
+    {
+      "url": "https://articles.nrma.com.au/help-nation-wild-weather-tracker/",
+      "urlHash": "5f0e6b6c56351966769d2fb95d147b596c1bc583",
+      "uuid": "5f0e6b6c-02-2718d6ce3e8f498491a32d2efbeaa4b9c8936732",
+      "xpath": "/html[1]/body[1]/article[1]/header[1]/div[1]/div[2]",
+      "section": "section-2"
+    },
+    {
+      "url": "https://articles.nrma.com.au/help-nation-wild-weather-tracker/",
+      "urlHash": "5f0e6b6c56351966769d2fb95d147b596c1bc583",
+      "uuid": "5f0e6b6c-04-f0997e1305ae50dfd83340ecebfc126abd9b57e0",
+      "xpath": "/html[1]/body[1]/article[1]/section[1]/div[1]",
+      "section": "section-2"
+    },
+    {
+      "url": "https://articles.nrma.com.au/help-nation-wild-weather-tracker/",
+      "urlHash": "5f0e6b6c56351966769d2fb95d147b596c1bc583",
+      "uuid": "5f0e6b6c-05-157c3d5cd4cb46fecba58e20553591dec971a6b3",
+      "xpath": "/html[1]/body[1]/article[1]/section[1]/div[2]/div[1]/div[1]/div[1]",
+      "section": "section-7"
+    },
+    {
+      "url": "https://articles.nrma.com.au/help-nation-wild-weather-tracker/",
+      "urlHash": "5f0e6b6c56351966769d2fb95d147b596c1bc583",
+      "uuid": "5f0e6b6c-07-1c1e74c77c34678b8640ff4eea50fee12b1fc3ab",
+      "xpath": "/html[1]/body[1]/article[1]/section[1]/div[2]/div[2]",
+      "section": "section-7"
+    },
+    {
+      "url": "https://articles.nrma.com.au/help-nation-wild-weather-tracker/",
+      "urlHash": "5f0e6b6c56351966769d2fb95d147b596c1bc583",
+      "uuid": "5f0e6b6c-08-4a55f519de9d1dc617df281497661cde9fca7791",
+      "xpath": "/html[1]/body[1]/article[1]/section[1]/div[3]",
+      "section": "section-1"
+    },
+    {
+      "url": "https://articles.nrma.com.au/the-knowledge-keepers/index.html",
+      "urlHash": "bae287ca3dc78600c99cb6298b4914c2a2b38c08",
+      "uuid": "bae287ca-00-6e70765a003047818ea5700b557b8d01b43078df",
+      "xpath": "/html[1]/body[1]/div[1]",
+      "section": "section-1"
+    },
+    {
+      "url": "https://articles.nrma.com.au/the-knowledge-keepers/index.html",
+      "urlHash": "bae287ca3dc78600c99cb6298b4914c2a2b38c08",
+      "uuid": "bae287ca-03-5ea2acaf7d1b26aaa559a2cc3cffbc0796b43145",
+      "xpath": "/html[1]/body[1]/article[1]/div[2]",
+      "section": "section-5"
+    },
+    {
+      "url": "https://articles.nrma.com.au/the-knowledge-keepers/index.html",
+      "urlHash": "bae287ca3dc78600c99cb6298b4914c2a2b38c08",
+      "uuid": "bae287ca-04-a02edd313b5cc3a149f7627052b215362bd006d2",
+      "xpath": "/html[1]/body[1]/article[1]/div[3]/div[1]/div[1]/div[1]",
+      "section": "section-6"
+    },
+    {
+      "url": "https://articles.nrma.com.au/the-knowledge-keepers/index.html",
+      "urlHash": "bae287ca3dc78600c99cb6298b4914c2a2b38c08",
+      "uuid": "bae287ca-06-37a6d9257ddb552baa55672d8c8b595e7518eabf",
+      "xpath": "/html[1]/body[1]/article[1]/div[4]",
+      "section": "section-2"
+    },
+    {
+      "url": "https://articles.nrma.com.au/the-knowledge-keepers/index.html",
+      "urlHash": "bae287ca3dc78600c99cb6298b4914c2a2b38c08",
+      "uuid": "bae287ca-07-3625755b3bd2a0e5a5d5ed5a3b96c100d4ff4225",
+      "xpath": "/html[1]/body[1]/article[1]/div[5]",
+      "section": "section-1"
+    },
+    {
+      "url": "https://articles.nrma.com.au/help-nation-support-toolkit/",
+      "urlHash": "c19779ed7841077cb93f6b8250baa77eec0abba9",
+      "uuid": "c19779ed-00-6e70765a003047818ea5700b557b8d01b43078df",
+      "xpath": "/html[1]/body[1]/div[1]",
+      "section": "section-1"
+    },
+    {
+      "url": "https://articles.nrma.com.au/help-nation-support-toolkit/",
+      "urlHash": "c19779ed7841077cb93f6b8250baa77eec0abba9",
+      "uuid": "c19779ed-03-5ea2acaf7d1b26aaa559a2cc3cffbc0796b43145",
+      "xpath": "/html[1]/body[1]/article[1]/div[2]",
+      "section": "section-1"
+    },
+    {
+      "url": "https://articles.nrma.com.au/help-nation-support-toolkit/",
+      "urlHash": "c19779ed7841077cb93f6b8250baa77eec0abba9",
+      "uuid": "c19779ed-04-a02edd313b5cc3a149f7627052b215362bd006d2",
+      "xpath": "/html[1]/body[1]/article[1]/div[3]/div[1]/div[1]/div[1]",
+      "section": "section-7"
+    },
+    {
+      "url": "https://articles.nrma.com.au/help-nation-support-toolkit/",
+      "urlHash": "c19779ed7841077cb93f6b8250baa77eec0abba9",
+      "uuid": "c19779ed-06-20b0b6fda3d55e7ced3d2aa8eeea4f19b8e466e3",
+      "xpath": "/html[1]/body[1]/article[1]/div[3]/div[2]",
+      "section": "section-7"
+    },
+    {
+      "url": "https://articles.nrma.com.au/help-nation-support-toolkit/",
+      "urlHash": "c19779ed7841077cb93f6b8250baa77eec0abba9",
+      "uuid": "c19779ed-07-37a6d9257ddb552baa55672d8c8b595e7518eabf",
+      "xpath": "/html[1]/body[1]/article[1]/div[4]",
+      "section": "section-1"
+    },
+    {
+      "url": "https://articles.nrma.com.au/nrmaboat/index.html",
+      "urlHash": "e383823235d56aab941e1002aba185344de9f6b0",
+      "uuid": "e3838232-03-b5fe6001fe1148a9e573fe240e4c3e7d71087e59",
+      "xpath": "/html[1]/body[1]/article[1]/section[1]/div[2]",
+      "section": "section-2"
+    },
+    {
+      "url": "https://articles.nrma.com.au/nrmaboat/index.html",
+      "urlHash": "e383823235d56aab941e1002aba185344de9f6b0",
+      "uuid": "e3838232-05-58bec8692a7638ce34640117a66fa39d4d785af1",
+      "xpath": "/html[1]/body[1]/article[1]/section[2]/div[1]/div[3]",
+      "section": "section-2"
+    },
+    {
+      "url": "https://articles.nrma.com.au/nrmaboat/index.html",
+      "urlHash": "e383823235d56aab941e1002aba185344de9f6b0",
+      "uuid": "e3838232-07-464ca7a6aba917cfa3ee37f09581c257560e7145",
+      "xpath": "/html[1]/body[1]/article[1]/section[2]/div[3]",
+      "section": "section-9"
+    },
+    {
+      "url": "https://articles.nrma.com.au/nrmaboat/index.html",
+      "urlHash": "e383823235d56aab941e1002aba185344de9f6b0",
+      "uuid": "e3838232-09-cf3855580c7c468ba06dd43a689a07619ec3c5d5",
+      "xpath": "/html[1]/body[1]/article[1]/section[2]/div[5]",
+      "section": "section-2"
+    },
+    {
+      "url": "https://articles.nrma.com.au/nrmaboat/index.html",
+      "urlHash": "e383823235d56aab941e1002aba185344de9f6b0",
+      "uuid": "e3838232-12-4e991ada2ff3941171c3ba101b2d83d9ffd3331b",
+      "xpath": "/html[1]/body[1]/article[1]/section[3]/div[2]/div[3]",
+      "section": "section-2"
+    },
+    {
+      "url": "https://articles.nrma.com.au/nrmaboat/index.html",
+      "urlHash": "e383823235d56aab941e1002aba185344de9f6b0",
+      "uuid": "e3838232-27-11a1827746d5450b8e6d38c5b23f491c71c0007c",
+      "xpath": "/html[1]/body[1]/article[1]/section[6]",
+      "section": "section-2"
+    }
+  ],
+  "sections": [
+    {
+      "name": "section-1",
+      "background": "rgb(1, 12, 102) none repeat scroll 0% 0% / auto padding-box border-box",
+      "count": 35
+    },
+    {
+      "name": "section-2",
+      "background": "rgb(19, 18, 40) none repeat scroll 0% 0% / auto padding-box border-box",
+      "count": 70
+    },
+    {
+      "name": "section-3",
+      "background": "rgb(0, 51, 141) none repeat scroll 0% 0% / auto padding-box border-box",
+      "count": 3
+    },
+    {
+      "name": "section-4",
+      "background": "rgba(0, 0, 0, 0) linear-gradient(90deg, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0.8) 30%, rgb(0, 0, 0) 60%) repeat scroll 0% 0% / auto padding-box border-box",
+      "count": 4
+    },
+    {
+      "name": "section-5",
+      "background": "rgb(212, 252, 240) none repeat scroll 0% 0% / auto padding-box border-box",
+      "count": 3
+    },
+    {
+      "name": "section-6",
+      "background": "rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box",
+      "count": 16
+    },
+    {
+      "name": "section-7",
+      "background": "rgb(20, 20, 55) none repeat scroll 0% 0% / auto padding-box border-box",
+      "count": 7
+    },
+    {
+      "name": "section-8",
+      "background": "rgb(215, 214, 103) none repeat scroll 0% 0% / auto padding-box border-box",
+      "count": 4
+    },
+    {
+      "name": "section-9",
+      "background": "rgb(0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "count": 2
+    }
+  ]
+}
