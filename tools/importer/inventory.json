@@ -155,22 +155,6 @@
       ]
     },
     {
-      "name": "header",
-      "cluster": 2,
-      "source": "Header",
-      "target": "Header (header2)",
-      "key": "header2",
-      "instances": [
-        {
-          "url": "https://articles.nrma.com.au/help-nation-support-toolkit/",
-          "urlHash": "c19779ed7841077cb93f6b8250baa77eec0abba9",
-          "uuid": "c19779ed-00-596805f6d73c34f49fe400e2e9d08547d11ac319",
-          "xpath": "/html[1]/body[1]/article[1]/header[1]",
-          "section": "section-2"
-        }
-      ]
-    },
-    {
       "name": "Cards",
       "cluster": 3,
       "source": "Cards",
@@ -972,6 +956,19 @@
           "uuid": "0281bd1a-00-596805f6d73c34f49fe400e2e9d08547d11ac319",
           "xpath": "/html[1]/body[1]/article[1]/header[1]",
           "section": "section-1"
+        }
+      ]
+    },
+    {
+      "name": "Hero",
+      "cluster": 34,
+      "instances": [
+        {
+          "url": "https://articles.nrma.com.au/help-nation-support-toolkit/",
+          "urlHash": "c19779ed7841077cb93f6b8250baa77eec0abba9",
+          "uuid": "c19779ed-00-596805f6d73c34f49fe400e2e9d08547d11ac319",
+          "xpath": "/html[1]/body[1]/article[1]/header[1]",
+          "section": "section-2"
         }
       ]
     }
