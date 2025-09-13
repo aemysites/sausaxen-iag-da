@@ -951,7 +951,7 @@
 .hero.hero31 {
   position: relative;
   width: 100vw;
-  height: 100vh; /* Force true vertical centering */
+  height: 100vh;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -965,7 +965,6 @@
   overflow: hidden;
 }
 
-/* Overlay - subtle for readability, does not overpower image */
 .hero.hero31::before {
   position: absolute;
   inset: 0;
@@ -976,12 +975,10 @@
   z-index: 0;
 }
 
-/* Hide the image element so only background image is visible */
 .hero.hero31 > div:first-child {
   display: none;
 }
 
-/* Content block: full height, flex column, perfect vertical/horizontal centering */
 .hero.hero31 > div:last-child {
   position: relative;
   z-index: 1;
@@ -995,7 +992,6 @@
   padding: 0;
 }
 
-/* Headline: large, bold, and spaced below for balance */
 .hero.hero31 h2 {
   color: #fff;
   font-size: 4rem;
@@ -1007,7 +1003,6 @@
   max-width: 900px;
 }
 
-/* Subheadline: optimal line length (2 lines), softer contrast for readability */
 .hero.hero31 h4 {
   color: rgb(255 255 255 / 82%);
   font-size: 1.25rem;
@@ -1019,15 +1014,12 @@
   overflow-wrap: break-word;
 }
 
-/* Ensure wrapping and centering remains correct */
 .hero.hero31 h2,
 .hero.hero31 h4 {
-  word-break: break-word;
   overflow-wrap: break-word;
   hyphens: auto;
 }
 
-/* Responsive adjustments for smaller screens */
 @media (width <= 900px) {
   .hero.hero31 {
     height: 70vh;
@@ -1041,6 +1033,94 @@
 
   .hero.hero31 h4 {
     font-size: 1rem;
+    max-width: 95vw;
+  }
+}
+
+
+.hero.hero32 {
+  background: #F6B19E;
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero.hero32 > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Ensure logo/badge is visible and centered above text block */
+.hero.hero32 > div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px; /* Space between badge and heading block */
+}
+
+.hero.hero32 > div:first-child > div > picture,
+.hero.hero32 > div:first-child > div > img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  position: static;
+}
+
+/* Heading/subtext container, centered below logo */
+.hero.hero32 > div:last-child > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Heading styles */
+.hero.hero32 > div:last-child > div > p:first-child {
+  margin: 0 0 18px;
+  font-size: 48px;
+  font-weight: 500;
+  color: #101B5A;
+  text-align: center;
+  line-height: 1.08;
+}
+
+/* Subtext styles */
+.hero.hero32 > div:last-child > div > p:last-child {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+  color: #101B5A;
+  text-align: center;
+  line-height: 1.3;
+  max-width: 900px;
+}
+
+/* Responsive tweaks for smaller screens */
+@media (width <= 700px) {
+  .hero.hero32 > div:first-child {
+    margin-bottom: 26px;
+  }
+
+  .hero.hero32 > div:first-child > div > picture,
+  .hero.hero32 > div:first-child > div > img {
+    max-width: 60px;
+  }
+
+  .hero.hero32 > div:last-child > div > p:first-child {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .hero.hero32 > div:last-child > div > p:last-child {
+    font-size: 13.5px;
     max-width: 95vw;
   }
 }
