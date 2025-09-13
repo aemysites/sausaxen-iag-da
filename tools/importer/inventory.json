@@ -972,6 +972,19 @@
           "section": "section-2"
         }
       ]
+    },
+    {
+      "name": "Hero",
+      "cluster": 31,
+      "instances": [
+        {
+          "url": "https://articles.nrma.com.au/helpnation/index.html",
+          "urlHash": "3f6bfd14b9ae4a0ddc358acceb7b6ee893af1984",
+          "uuid": "3f6bfd14-01-596805f6d73c34f49fe400e2e9d08547d11ac319",
+          "xpath": "/html[1]/body[1]/article[1]/header[1]",
+          "section": "section-1"
+        }
+      ]
     }
   ],
   "outliers": [
@@ -1099,13 +1112,6 @@
       "urlHash": "3f6bfd14b9ae4a0ddc358acceb7b6ee893af1984",
       "uuid": "3f6bfd14-00-6e70765a003047818ea5700b557b8d01b43078df",
       "xpath": "/html[1]/body[1]/div[1]",
-      "section": "section-1"
-    },
-    {
-      "url": "https://articles.nrma.com.au/helpnation/index.html",
-      "urlHash": "3f6bfd14b9ae4a0ddc358acceb7b6ee893af1984",
-      "uuid": "3f6bfd14-01-596805f6d73c34f49fe400e2e9d08547d11ac319",
-      "xpath": "/html[1]/body[1]/article[1]/header[1]",
       "section": "section-1"
     },
     {
