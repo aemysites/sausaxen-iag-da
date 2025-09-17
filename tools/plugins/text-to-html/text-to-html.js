@@ -4,22 +4,22 @@ import { showStatus } from './utils.js';
 // Function to get current page name from URL
 function getCurrentPageName() {
   const currentUrl = window.location.href;
-  const url = new URL(currentUrl);
-  
+  const { pathname: urlPathname } = new URL(currentUrl);
+
   // Extract path from URL and clean it up
-  let pathname = url.pathname;
-  
+  let pathname = urlPathname;
+
   // Remove file extensions
   pathname = pathname.replace(/\.(html|htm)$/i, '');
-  
+
   // Remove leading slash but keep the path structure
   pathname = pathname.replace(/^\/+/, '');
-  
+
   // If empty (root path), use a default name
   if (!pathname) {
     pathname = 'home';
   }
-  
+
   return pathname;
 }
 
