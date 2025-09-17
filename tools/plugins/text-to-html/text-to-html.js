@@ -3,7 +3,15 @@ import { showStatus } from './utils.js';
 
 // Function to get current page name from URL
 function getCurrentPageName() {
-  const currentUrl = window.location.href;
+  // Try to get the parent window's URL first (if plugin is in an iframe)
+  let currentUrl;
+  try {
+    currentUrl = window.parent !== window ? window.parent.location.href : window.location.href;
+  } catch (e) {
+    // If cross-origin, fall back to current window
+    currentUrl = window.location.href;
+  }
+
   const { pathname: urlPathname } = new URL(currentUrl);
 
   // Extract path from URL and clean it up
