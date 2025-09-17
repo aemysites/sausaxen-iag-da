@@ -2,26 +2,36 @@
 <html>
   <head>
     <title>Text to HTML</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="icon" href="data:,">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="data:," />
     <script src="https://da.live/nx/utils/sdk.js" type="module"></script>
     <script src="/tools/plugins/text-to-html/da-api.js" type="module"></script>
     <script src="/tools/plugins/text-to-html/blocks.js" type="module"></script>
     <script src="/tools/plugins/text-to-html/utils.js" type="module"></script>
-    <script src="/tools/plugins/text-to-html/text-to-html.js" type="module"></script>
-    <link rel="stylesheet" href="/tools/plugins/text-to-html/text-to-html.css">
+    <script
+      src="/tools/plugins/text-to-html/text-to-html.js"
+      type="module"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="/tools/plugins/text-to-html/text-to-html.css"
+    />
   </head>
   <body>
     <div id="text-to-html-container">
       <div class="input-section">
         <div class="info-note">
-          <strong>Note:</strong> Enter your text content and see the HTML output in real-time.
+          <strong>Note:</strong> Enter your prompt and see the page created in
+          real-time.
         </div>
-        
+
         <div class="input-group">
-          <label for="text-input">Text Input:</label>
-          <textarea id="text-input" placeholder="Enter your text here..." rows="8"></textarea>
-          <small>Type or paste your content above to generate HTML</small>
+          <label for="text-input">Please enter your prompt here: </label>
+          <textarea
+            id="text-input"
+            placeholder="Type your prompt to create a new page inspired by another page’s content..."
+            rows="8"
+          ></textarea>
         </div>
       </div>
 
@@ -29,99 +39,24 @@
         <h3>DA Page Creation Settings:</h3>
         <div class="da-form-row">
           <div class="input-group">
-            <label for="da-org">Organization:</label>
-            <input type="text" id="da-org" placeholder="e.g., adobecom" />
-            <small>The DA organization name</small>
-          </div>
-          <div class="input-group">
-            <label for="da-repo">Repository:</label>
-            <input type="text" id="da-repo" placeholder="e.g., blog" />
-            <small>The repository/site name</small>
-          </div>
-          <div class="input-group">
-            <label for="da-path">Page Path:</label>
-            <input type="text" id="da-path" placeholder="e.g., my-new-page or path/to/page" />
+            <label for="da-path">Page Name:</label>
+            <input
+              type="text"
+              id="da-path"
+              placeholder="e.g., my-new-page or path/to/page"
+            />
             <small>Path for the new page (without .html extension)</small>
-          </div>
-        </div>
-        <div class="da-form-row">
-          <div class="input-group">
-            <label for="da-block-type">Block Type:</label>
-            <select id="da-block-type">
-              <option value="none">No Block (Simple Content)</option>
-              <option value="hero">Hero Block</option>
-              <option value="cards">Cards Block</option>
-              <option value="accordion">Accordion Block</option>
-              <option value="quote">Quote Block</option>
-              <option value="table">Table Block</option>
-              <option value="tabs">Tabs Block</option>
-            </select>
-            <small>Choose a block type to wrap your content</small>
-          </div>
-        </div>
-        <div class="da-form-row">
-          <div class="input-group da-token-group">
-            <label for="da-token">DA Auth Token:</label>
-            <input type="password" id="da-token" placeholder="Enter your DA authentication token (optional)" />
-            <small>Leave empty to use default token. Get your token from DA console.</small>
           </div>
         </div>
       </div>
 
       <div id="status-messages" class="status-messages"></div>
-      
+
       <div class="main-content">
-        <div class="two-column-layout">
-          <div class="options-column" role="region" aria-labelledby="options-heading">
-            <h3 id="options-heading">HTML Options:</h3>
-            <div class="options-list">
-              <div class="option-group">
-                <label>
-                  <input type="checkbox" id="auto-paragraphs" checked>
-                  Auto-wrap paragraphs
-                </label>
-                <small>Automatically wrap line breaks in &lt;p&gt; tags</small>
-              </div>
-              
-              <div class="option-group">
-                <label>
-                  <input type="checkbox" id="preserve-breaks">
-                  Preserve line breaks
-                </label>
-                <small>Convert line breaks to &lt;br&gt; tags</small>
-              </div>
-              
-              <div class="option-group">
-                <label>
-                  <input type="checkbox" id="escape-html">
-                  Escape HTML entities
-                </label>
-                <small>Convert special characters (&lt;, &gt;, &amp;)</small>
-              </div>
-              
-              <div class="option-group">
-                <label>
-                  <input type="checkbox" id="detect-links">
-                  Auto-detect links
-                </label>
-                <small>Convert URLs to clickable links</small>
-              </div>
-            </div>
-          </div>
-          
-          <div class="output-column" role="region" aria-labelledby="output-heading">
-            <h3 id="output-heading">HTML Output:</h3>
-            <div id="html-preview" class="html-preview" role="region" aria-live="polite" aria-label="HTML output">
-              <div class="empty-state">
-                <p>Enter text to see HTML output</p>
-              </div>
-            </div>
-            <div class="output-actions">
-              <button id="copy-html" type="button" class="button secondary" disabled>Copy HTML</button>
-              <button id="insert-html" type="button" class="button secondary" disabled>Insert into Document</button>
-              <button id="create-da-page" type="button" class="button primary" disabled>Create DA Page</button>
-            </div>
-          </div>
+        <div class="action-section">
+          <button id="create-da-page" type="button" class="button primary">
+            Create DA Page
+          </button>
         </div>
       </div>
     </div>
