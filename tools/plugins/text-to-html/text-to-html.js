@@ -36,8 +36,8 @@ async function createDAPageFromForm() {
       },
       body: JSON.stringify({
         prompt: promptText,
-        pageName: pageName
-      })
+        pageName,
+      }),
     });
 
     const result = await response.json();
@@ -67,6 +67,7 @@ async function createDAPageFromForm() {
       createButton.disabled = false;
     }, 3000);
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.error('Failed to generate page:', error);
     showStatus(`Failed to generate page: ${error.message}`, 'error');
 
@@ -76,7 +77,6 @@ async function createDAPageFromForm() {
 }
 
 function initialize() {
-  const textInput = document.getElementById('text-input');
   const createButton = document.getElementById('create-da-page');
 
   // Add event listener for create button
@@ -86,4 +86,3 @@ function initialize() {
 }
 
 document.addEventListener('DOMContentLoaded', initialize);
-
