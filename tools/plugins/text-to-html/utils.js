@@ -36,16 +36,17 @@ export function convertTextToHtml(text, options) {
     // Split by double line breaks to create paragraphs
     const paragraphs = html.split(/\n\s*\n/);
     html = paragraphs
-      .map(para => para.trim())
-      .filter(para => para.length > 0)
-      .map(para => {
+      .map((para) => para.trim())
+      .filter((para) => para.length > 0)
+      .map((para) => {
         // Handle single line breaks within paragraphs
+        let processedPara = para;
         if (options.preserveBreaks) {
-          para = para.replace(/\n/g, '<br>');
+          processedPara = processedPara.replace(/\n/g, '<br>');
         } else {
-          para = para.replace(/\n/g, ' ');
+          processedPara = processedPara.replace(/\n/g, ' ');
         }
-        return `<p>${para}</p>`;
+        return `<p>${processedPara}</p>`;
       })
       .join('\n');
   } else if (options.preserveBreaks) {
@@ -68,13 +69,13 @@ export function highlightHtml(html) {
 // Show status messages to user
 export function showStatus(message, type = 'info') {
   const statusContainer = document.getElementById('status-messages');
-  
+
   const statusDiv = document.createElement('div');
   statusDiv.className = `status-message ${type}`;
   statusDiv.innerHTML = message;
-  
+
   statusContainer.appendChild(statusDiv);
-  
+
   // Auto-remove after 5 seconds for info/success, 10 seconds for errors
   const timeout = type === 'error' ? 10000 : 5000;
   setTimeout(() => {
@@ -88,19 +89,19 @@ export function showStatus(message, type = 'info') {
 export async function copyToClipboard(text, button) {
   try {
     await navigator.clipboard.writeText(text);
-    
+
     // Show success state
     const originalText = button.textContent;
     button.textContent = 'Copied!';
     button.classList.add('success');
-    
+
     setTimeout(() => {
       button.textContent = originalText;
       button.classList.remove('success');
     }, 2000);
   } catch (error) {
     console.error('Failed to copy text:', error);
-    
+
     // Fallback: select text for manual copy
     const textArea = document.createElement('textarea');
     textArea.value = text;
@@ -108,10 +109,10 @@ export async function copyToClipboard(text, button) {
     textArea.select();
     document.execCommand('copy');
     document.body.removeChild(textArea);
-    
+
     button.textContent = 'Copied!';
     button.classList.add('success');
-    
+
     setTimeout(() => {
       button.textContent = 'Copy HTML';
       button.classList.remove('success');

@@ -11,11 +11,10 @@
  */
 /* eslint-disable no-console */
 (() => {
-   
-    try {
-        document.querySelector(".Header")?.remove();
-        document.querySelector(".Core--rootElement")?.remove();
-      } catch (e) {
-        // noop
-      }
-  })();
+  try {
+    document.querySelector('.Header')?.remove();
+    document.querySelector('.Core--rootElement')?.remove();
+  } catch (e) {
+    // noop
+  }
+})();
