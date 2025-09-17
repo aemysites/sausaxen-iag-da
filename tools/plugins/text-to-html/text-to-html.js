@@ -1,6 +1,28 @@
 /* eslint-disable import/no-unresolved */
 import { showStatus } from './utils.js';
 
+// Function to get current page name from URL
+function getCurrentPageName() {
+  const currentUrl = window.location.href;
+  const url = new URL(currentUrl);
+  
+  // Extract path from URL and clean it up
+  let pathname = url.pathname;
+  
+  // Remove file extensions
+  pathname = pathname.replace(/\.(html|htm)$/i, '');
+  
+  // Remove leading slash but keep the path structure
+  pathname = pathname.replace(/^\/+/, '');
+  
+  // If empty (root path), use a default name
+  if (!pathname) {
+    pathname = 'home';
+  }
+  
+  return pathname;
+}
+
 // Create a new DA page with the prompt content
 async function createDAPageFromForm() {
   const textInput = document.getElementById('text-input');
@@ -8,16 +30,17 @@ async function createDAPageFromForm() {
   const createButton = document.getElementById('create-da-page');
 
   const promptText = textInput.value.trim();
-  const pageName = pathInput.value.trim();
+  let pageName = pathInput.value.trim();
 
   if (!promptText) {
     showStatus('Please enter your prompt text.', 'error');
     return;
   }
 
+  // If no page name provided, use current page name
   if (!pageName) {
-    showStatus('Please enter a page name.', 'error');
-    return;
+    pageName = getCurrentPageName();
+    showStatus(`Using current page name: "${pageName}"`, 'info');
   }
 
   const originalText = createButton.textContent;
@@ -78,6 +101,14 @@ async function createDAPageFromForm() {
 
 function initialize() {
   const createButton = document.getElementById('create-da-page');
+  const pathInput = document.getElementById('da-path');
+
+  // Auto-populate page name with current page
+  if (pathInput) {
+    const currentPageName = getCurrentPageName();
+    pathInput.value = currentPageName;
+    pathInput.placeholder = `e.g., ${currentPageName} or path/to/page`;
+  }
 
   // Add event listener for create button
   if (createButton) {
