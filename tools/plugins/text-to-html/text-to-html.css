@@ -83,7 +83,8 @@
     border-color: var(--blue);
   }
 
-  input[type="text"] {
+  input[type="text"], 
+  input[type="password"] {
     width: 100%;
     padding: 8px;
     border: 1px solid var(--border-color);
@@ -95,7 +96,8 @@
     box-sizing: border-box;
   }
 
-  input[type="text"]:focus {
+  input[type="text"]:focus,
+  input[type="password"]:focus {
     outline: 2px solid var(--focus-outline);
     outline-offset: 2px;
     border-color: var(--blue);
@@ -145,6 +147,10 @@
 
   .da-form-row:last-child {
     margin-bottom: 0;
+  }
+
+  .da-token-group {
+    grid-column: 1 / -1;
   }
 
   .status-messages {

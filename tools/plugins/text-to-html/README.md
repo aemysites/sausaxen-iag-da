@@ -63,6 +63,9 @@ If you want to create a new DA page:
    - **Quote Block**: Styled quotation with attribution
    - **Table Block**: Tabular data presentation
    - **Tabs Block**: Tabbed content organization
+5. **Enter DA Auth Token** (Optional): Provide your own authentication token
+   - Leave empty to use the default token
+   - Get your token from the DA console or developer tools
 
 ### Step 5: Use the HTML
 1. **Copy HTML** to clipboard for use elsewhere
@@ -131,7 +134,11 @@ The plugin now integrates with the [DA Admin API](https://opensource.adobe.com/d
 
 ### 🔐 **Authentication**
 - Requires a valid DA authentication token
-- The plugin automatically retrieves your token from the DA environment
+- **Multiple token sources** (in priority order):
+  1. **User-provided token**: Enter your own token in the "DA Auth Token" field
+  2. **Default token**: Falls back to a default token for testing
+  3. **Local storage**: Checks for saved tokens from DA sessions
+- Get your token from the DA console's developer tools or network tab
 - Ensure you're logged into Document Authoring before using this feature
 
 ### 📄 **Generated Page Structure**
