@@ -82,6 +82,108 @@
     outline-offset: 2px;
     border-color: var(--blue);
   }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--white);
+    font-family: var(--font-family);
+    font-size: 14px;
+    color: var(--text-primary);
+    box-sizing: border-box;
+  }
+
+  input[type="text"]:focus {
+    outline: 2px solid var(--focus-outline);
+    outline-offset: 2px;
+    border-color: var(--blue);
+  }
+
+  select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--white);
+    font-family: var(--font-family);
+    font-size: 14px;
+    color: var(--text-primary);
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+
+  select:focus {
+    outline: 2px solid var(--focus-outline);
+    outline-offset: 2px;
+    border-color: var(--blue);
+  }
+
+  .da-config-section {
+    margin-bottom: 16px;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: var(--background-schedule);
+  }
+
+  .da-config-section h3 {
+    margin: 0 0 12px 0;
+    font-size: 15px;
+    color: var(--text-primary);
+    font-family: var(--font-family);
+    font-weight: 700;
+  }
+
+  .da-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .da-form-row:last-child {
+    margin-bottom: 0;
+  }
+
+  .status-messages {
+    margin-bottom: 16px;
+    min-height: 20px;
+  }
+
+  .status-message {
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-family: var(--font-family);
+    border-left: 4px solid;
+  }
+
+  .status-message.info {
+    background-color: #e1f5fe;
+    border-left-color: #0288d1;
+    color: #01579b;
+  }
+
+  .status-message.success {
+    background-color: #e8f5e8;
+    border-left-color: var(--success-color);
+    color: #2e7d32;
+  }
+
+  .status-message.error {
+    background-color: #ffebee;
+    border-left-color: var(--error-color);
+    color: #c62828;
+  }
+
+  .status-message a {
+    color: inherit;
+    text-decoration: underline;
+    font-weight: 600;
+  }
   
   .button {
     padding: 8px 16px;
@@ -121,6 +223,18 @@
     background-color: var(--blue);
     opacity: 0.9;
   }
+
+  .button.primary {
+    border-color: var(--blue);
+    background-color: var(--blue);
+    color: var(--white);
+    font-weight: 700;
+  }
+
+  .button.primary:hover:not(:disabled) {
+    background-color: var(--blue);
+    opacity: 0.9;
+  }
   
   .main-content {
     font-family: var(--font-family);
@@ -132,7 +246,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
-    height: calc(600px - 200px); /* Reserve space for input section */
+    height: calc(600px - 280px); /* Reserve space for input section and DA config */
   }
   
   .options-column, .output-column {
@@ -254,6 +368,15 @@
   @media (width <= 650px) {
     .two-column-layout {
       gap: 12px;
+    }
+    
+    .da-form-row {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+    
+    .da-form-row:first-child {
+      grid-template-columns: 1fr;
     }
     
     .options-column h3, .output-column h3 {

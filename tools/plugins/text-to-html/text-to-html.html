@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="icon" href="data:,">
     <script src="https://da.live/nx/utils/sdk.js" type="module"></script>
+    <script src="/tools/plugins/text-to-html/da-api.js" type="module"></script>
+    <script src="/tools/plugins/text-to-html/blocks.js" type="module"></script>
+    <script src="/tools/plugins/text-to-html/utils.js" type="module"></script>
     <script src="/tools/plugins/text-to-html/text-to-html.js" type="module"></script>
     <link rel="stylesheet" href="/tools/plugins/text-to-html/text-to-html.css">
   </head>
@@ -21,6 +24,44 @@
           <small>Type or paste your content above to generate HTML</small>
         </div>
       </div>
+
+      <div class="da-config-section">
+        <h3>DA Page Creation Settings:</h3>
+        <div class="da-form-row">
+          <div class="input-group">
+            <label for="da-org">Organization:</label>
+            <input type="text" id="da-org" placeholder="e.g., adobecom" />
+            <small>The DA organization name</small>
+          </div>
+          <div class="input-group">
+            <label for="da-repo">Repository:</label>
+            <input type="text" id="da-repo" placeholder="e.g., blog" />
+            <small>The repository/site name</small>
+          </div>
+          <div class="input-group">
+            <label for="da-path">Page Path:</label>
+            <input type="text" id="da-path" placeholder="e.g., my-new-page or path/to/page" />
+            <small>Path for the new page (without .html extension)</small>
+          </div>
+        </div>
+        <div class="da-form-row">
+          <div class="input-group">
+            <label for="da-block-type">Block Type:</label>
+            <select id="da-block-type">
+              <option value="none">No Block (Simple Content)</option>
+              <option value="hero">Hero Block</option>
+              <option value="cards">Cards Block</option>
+              <option value="accordion">Accordion Block</option>
+              <option value="quote">Quote Block</option>
+              <option value="table">Table Block</option>
+              <option value="tabs">Tabs Block</option>
+            </select>
+            <small>Choose a block type to wrap your content</small>
+          </div>
+        </div>
+      </div>
+
+      <div id="status-messages" class="status-messages"></div>
       
       <div class="main-content">
         <div class="two-column-layout">
@@ -71,6 +112,7 @@
             <div class="output-actions">
               <button id="copy-html" type="button" class="button secondary" disabled>Copy HTML</button>
               <button id="insert-html" type="button" class="button secondary" disabled>Insert into Document</button>
+              <button id="create-da-page" type="button" class="button primary" disabled>Create DA Page</button>
             </div>
           </div>
         </div>

@@ -1,70 +1,14 @@
 /* eslint-disable import/no-unresolved */
 import DA_SDK from 'https://da.live/nx/utils/sdk.js';
-
-// HTML escape function
-function escapeHtml(text) {
-  const div = document.createElement('div');
-  div.textContent = text;
-  return div.innerHTML;
-}
-
-// Simple URL detection regex
-const urlRegex = /(https?:\/\/[^\s<>"{}|\\^`[\]]+)/gi;
-
-// Auto-detect and convert URLs to links
-function autoLinkUrls(text) {
-  return text.replace(urlRegex, '<a href="$1" target="_blank" rel="noopener">$1</a>');
-}
-
-// Convert text to HTML based on options
-function convertTextToHtml(text, options) {
-  if (!text.trim()) return '';
-
-  let html = text;
-
-  // Escape HTML entities if requested
-  if (options.escapeHtml) {
-    html = escapeHtml(html);
-  }
-
-  // Auto-detect links if requested
-  if (options.detectLinks && !options.escapeHtml) {
-    html = autoLinkUrls(html);
-  }
-
-  // Handle line breaks and paragraphs
-  if (options.autoParagraphs) {
-    // Split by double line breaks to create paragraphs
-    const paragraphs = html.split(/\n\s*\n/);
-    html = paragraphs
-      .map(para => para.trim())
-      .filter(para => para.length > 0)
-      .map(para => {
-        // Handle single line breaks within paragraphs
-        if (options.preserveBreaks) {
-          para = para.replace(/\n/g, '<br>');
-        } else {
-          para = para.replace(/\n/g, ' ');
-        }
-        return `<p>${para}</p>`;
-      })
-      .join('\n');
-  } else if (options.preserveBreaks) {
-    // Just convert line breaks to <br> tags
-    html = html.replace(/\n/g, '<br>');
-  }
-
-  return html;
-}
-
-// Add basic syntax highlighting to HTML preview
-function highlightHtml(html) {
-  return html
-    .replace(/(&lt;\/?)([a-zA-Z][a-zA-Z0-9]*)/g, '$1<span class="tag">$2</span>')
-    .replace(/(\s)([a-zA-Z-]+)(=)/g, '$1<span class="attr">$2</span>$3')
-    .replace(/(=")([^"]*?)(")/g, '=$1<span class="string">$2</span>$3')
-    .replace(/(=')([^']*?)(')/g, '=$1<span class="string">$2</span>$3');
-}
+import { createDAPage } from './da-api.js';
+import { getSelectedBlockType, createPageWithBlock } from './blocks.js';
+import { 
+  convertTextToHtml, 
+  highlightHtml, 
+  escapeHtml, 
+  showStatus, 
+  copyToClipboard 
+} from './utils.js';
 
 // Update the HTML preview
 function updatePreview() {
@@ -72,6 +16,7 @@ function updatePreview() {
   const htmlPreview = document.getElementById('html-preview');
   const copyButton = document.getElementById('copy-html');
   const insertButton = document.getElementById('insert-html');
+  const createButton = document.getElementById('create-da-page');
   
   const text = textInput.value;
   
@@ -91,6 +36,7 @@ function updatePreview() {
     `;
     copyButton.disabled = true;
     insertButton.disabled = true;
+    createButton.disabled = true;
     return;
   }
   
@@ -108,6 +54,7 @@ function updatePreview() {
   // Enable buttons
   copyButton.disabled = false;
   insertButton.disabled = false;
+  createButton.disabled = false;
 }
 
 // Copy HTML to clipboard
@@ -118,37 +65,7 @@ async function copyHtml() {
   
   if (!rawHtml) return;
   
-  try {
-    await navigator.clipboard.writeText(rawHtml);
-    
-    // Show success state
-    const originalText = copyButton.textContent;
-    copyButton.textContent = 'Copied!';
-    copyButton.classList.add('success');
-    
-    setTimeout(() => {
-      copyButton.textContent = originalText;
-      copyButton.classList.remove('success');
-    }, 2000);
-  } catch (error) {
-    console.error('Failed to copy HTML:', error);
-    
-    // Fallback: select text for manual copy
-    const textArea = document.createElement('textarea');
-    textArea.value = rawHtml;
-    document.body.appendChild(textArea);
-    textArea.select();
-    document.execCommand('copy');
-    document.body.removeChild(textArea);
-    
-    copyButton.textContent = 'Copied!';
-    copyButton.classList.add('success');
-    
-    setTimeout(() => {
-      copyButton.textContent = 'Copy HTML';
-      copyButton.classList.remove('success');
-    }, 2000);
-  }
+  await copyToClipboard(rawHtml, copyButton);
 }
 
 // Insert HTML into document using DA SDK
@@ -167,6 +84,86 @@ async function insertHtml() {
     
     // Fallback: copy to clipboard
     await copyHtml();
+  }
+}
+
+// Create a new DA page with the generated HTML
+async function createDAPageFromForm() {
+  const htmlPreview = document.getElementById('html-preview');
+  const rawHtml = htmlPreview.dataset.rawHtml;
+  
+  if (!rawHtml) {
+    showStatus('No HTML content to create page with.', 'error');
+    return;
+  }
+
+  // Get form values
+  const org = document.getElementById('da-org').value.trim();
+  const repo = document.getElementById('da-repo').value.trim();
+  const path = document.getElementById('da-path').value.trim();
+
+  if (!org || !repo || !path) {
+    showStatus('Please fill in organization, repository, and page path.', 'error');
+    return;
+  }
+
+  const createButton = document.getElementById('create-da-page');
+  const originalText = createButton.textContent;
+  
+  try {
+    // Update button state
+    createButton.disabled = true;
+    createButton.textContent = 'Creating...';
+    showStatus('Creating DA page...', 'info');
+
+    // Create page content with selected block type
+    const blockType = getSelectedBlockType();
+    let fullHtmlContent;
+    
+    if (blockType && blockType !== 'none') {
+      // Create page with block structure
+      fullHtmlContent = createPageWithBlock(rawHtml, blockType);
+    } else {
+      // Create simple page structure
+      fullHtmlContent = `<body>
+  <header></header>
+  <main>
+    <div>
+${rawHtml}
+    </div>
+  </main>
+</body>`;
+    }
+
+    const result = await createDAPage(org, repo, path, fullHtmlContent);
+    
+    showStatus('DA page created successfully!', 'success');
+    createButton.textContent = 'Created!';
+    createButton.classList.add('success');
+
+    // Show result URLs if available
+    if (result.source?.editUrl) {
+      const editUrl = result.source.editUrl;
+      showStatus(`Page created! <a href="${editUrl}" target="_blank">Edit in DA</a>`, 'success');
+    }
+
+    if (result.aem?.previewUrl) {
+      const previewUrl = result.aem.previewUrl;
+      showStatus(`Preview available: <a href="${previewUrl}" target="_blank">View Preview</a>`, 'info');
+    }
+
+    setTimeout(() => {
+      createButton.textContent = originalText;
+      createButton.classList.remove('success');
+      createButton.disabled = false;
+    }, 3000);
+
+  } catch (error) {
+    console.error('Failed to create DA page:', error);
+    showStatus(`Failed to create DA page: ${error.message}`, 'error');
+    
+    createButton.textContent = originalText;
+    createButton.disabled = false;
   }
 }
 
@@ -196,6 +193,7 @@ function initializeEventListeners() {
   // Button clicks
   document.getElementById('copy-html').addEventListener('click', copyHtml);
   document.getElementById('insert-html').addEventListener('click', insertHtml);
+  document.getElementById('create-da-page').addEventListener('click', createDAPageFromForm);
   
   // Handle mutual exclusivity between auto-paragraphs and preserve-breaks
   const autoParagraphs = document.getElementById('auto-paragraphs');

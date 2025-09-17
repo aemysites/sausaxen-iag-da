@@ -28,6 +28,7 @@ The Text to HTML plugin provides a simple interface for converting plain text co
 ### 📤 **Export Options**
 - **Copy HTML**: Copy generated HTML to clipboard
 - **Insert into Document**: Direct insertion using DA SDK
+- **Create DA Page**: Create a new Document Authoring page using the DA Admin API
 - Visual feedback for successful operations
 
 ## 🚀 How to Use
@@ -49,10 +50,25 @@ Choose from these formatting options:
 - ☐ **Escape HTML entities**
 - ☐ **Auto-detect links**
 
-### Step 4: Use the HTML
+### Step 4: Configure DA Page Settings (Optional)
+If you want to create a new DA page:
+1. **Enter Organization**: The DA organization name (e.g., "adobecom")
+2. **Enter Repository**: The repository/site name (e.g., "blog")
+3. **Enter Page Path**: Path for the new page (e.g., "my-new-page")
+4. **Select Block Type**: Choose how to structure your content:
+   - **No Block**: Simple content in a div
+   - **Hero Block**: Large promotional content block
+   - **Cards Block**: Content split into card components
+   - **Accordion Block**: Collapsible content sections
+   - **Quote Block**: Styled quotation with attribution
+   - **Table Block**: Tabular data presentation
+   - **Tabs Block**: Tabbed content organization
+
+### Step 5: Use the HTML
 1. **Copy HTML** to clipboard for use elsewhere
 2. **Insert into Document** to add directly to your page
-3. Preview updates instantly as you make changes
+3. **Create DA Page** to create a new Document Authoring page with the HTML content
+4. Preview updates instantly as you make changes
 
 ## 📋 Example Conversions
 
@@ -100,17 +116,75 @@ Use the <div> tag for containers.
 <p>Use the &lt;div&gt; tag for containers.</p>
 ```
 
+## 🔗 DA Admin API Integration
+
+### 🚀 **Create New DA Pages**
+The plugin now integrates with the [DA Admin API](https://opensource.adobe.com/da-admin/#tag/Source/operation/createSource) to create new Document Authoring pages directly from your converted HTML content.
+
+### 📋 **How It Works**
+1. Convert your text to HTML using the plugin
+2. Fill in the DA Page Creation Settings:
+   - **Organization**: Your DA organization (e.g., "adobecom")
+   - **Repository**: Your repository/site name (e.g., "blog")  
+   - **Page Path**: Desired path for the new page (e.g., "my-new-page")
+3. Click **"Create DA Page"** to automatically create a new page
+
+### 🔐 **Authentication**
+- Requires a valid DA authentication token
+- The plugin automatically retrieves your token from the DA environment
+- Ensure you're logged into Document Authoring before using this feature
+
+### 📄 **Generated Page Structure**
+The plugin creates a complete HTML document. The structure varies based on the selected block type:
+
+**Simple Content (No Block):**
+```html
+<body>
+  <header></header>
+  <main>
+    <div>
+      [Your converted HTML content]
+    </div>
+  </main>
+</body>
+```
+
+**With Block Structure (e.g., Hero Block):**
+```html
+<body>
+  <header></header>
+  <main>
+    <div>
+      <div class="hero">
+        <div>
+          <div>
+            [Your converted HTML content]
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+```
+
+### 🔗 **Result Links**
+After successful page creation, you'll receive:
+- **Edit URL**: Direct link to edit the page in DA
+- **Preview URL**: Link to view the page preview in AEM
+
 ## 🎯 Perfect For
 
 ### 📄 **Content Migration**
 - Converting plain text content to HTML
 - Cleaning up pasted content from other sources  
 - Bulk text processing for multiple pages
+- **Creating new DA pages from converted content**
 
 ### 📝 **Quick Formatting**
 - Adding proper paragraph structure to text
 - Converting simple text lists to HTML
 - Preparing content for web publishing
+- **Publishing formatted content directly to DA**
 
 ### 🔗 **Link Processing**
 - Auto-converting URLs in text content
@@ -129,13 +203,24 @@ Use the <div> tag for containers.
 - Document Authoring environment
 - Clipboard API support (for copy functionality)
 
+### Modular Architecture
+The plugin uses a clean modular architecture with ES6 imports/exports:
+
+- **`text-to-html.js`**: Main coordination module - handles UI interactions, event listeners, and orchestrates other modules
+- **`da-api.js`**: DA Admin API integration - authentication, page creation, API calls
+- **`blocks.js`**: AEM block creation - all block generation functions and page structure logic
+- **`utils.js`**: HTML conversion utilities - text processing, syntax highlighting, clipboard operations
+
 ### File Structure
 ```
 tools/plugins/text-to-html/
 ├── text-to-html.html    # Plugin interface
 ├── text-to-html.css     # Styling  
-├── text-to-html.js      # Main functionality
-└── README.md            # This documentation
+├── text-to-html.js      # Main functionality and coordination
+├── da-api.js           # DA Admin API integration
+├── blocks.js           # AEM block creation functions
+├── utils.js            # HTML conversion and utility functions
+└── README.md           # This documentation
 ```
 
 ## 🎨 Design Features
@@ -190,6 +275,13 @@ Safely converts:
 - Ensure browser supports Clipboard API
 - Check DA SDK connection for insert functionality
 - Use manual copy as fallback (text selection method)
+
+### DA Page Creation Fails
+- **Authentication Error**: Ensure you're logged into Document Authoring
+- **Invalid Organization/Repository**: Verify the organization and repository names are correct
+- **Path Conflicts**: Check if a page already exists at the specified path
+- **Network Issues**: Check your internet connection and DA service status
+- **Token Expired**: Try refreshing the DA interface and attempting again
 
 ### Preview Not Updating
 - Check browser console for JavaScript errors
