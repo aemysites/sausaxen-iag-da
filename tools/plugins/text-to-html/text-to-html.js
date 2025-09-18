@@ -5,13 +5,46 @@ import { showStatus } from './utils.js';
 // Function to get current page name using proper DA SDK
 async function getCurrentPageNameFromDA() {
   try {
-    // Use the correct DA_SDK global pattern
+    // Debug: Check what's available
+    // eslint-disable-next-line no-console
+    console.log('Checking DA SDK availability...');
+    // eslint-disable-next-line no-console
+    console.log('typeof DA_SDK:', typeof DA_SDK);
+    // eslint-disable-next-line no-console
+    console.log('window.DA_SDK:', typeof window.DA_SDK);
+    // eslint-disable-next-line no-console
+    console.log('All window properties with DA:', Object.keys(window).filter(key => key.includes('DA')));
+
+    // Try multiple approaches to access DA SDK
+    let sdk = null;
+    
+    // Approach 1: Direct global
     if (typeof DA_SDK !== 'undefined') {
-      const { context } = await DA_SDK;
+      sdk = DA_SDK;
+    }
+    // Approach 2: Window global
+    else if (typeof window.DA_SDK !== 'undefined') {
+      sdk = window.DA_SDK;
+    }
+    // Approach 3: Check if it's in a different global
+    else if (typeof window.da !== 'undefined' && window.da.SDK) {
+      sdk = window.da.SDK;
+    }
+
+    if (sdk) {
+      // eslint-disable-next-line no-console
+      console.log('DA SDK found, attempting to get context...');
+      const { context } = await sdk;
+      // eslint-disable-next-line no-console
+      console.log('DA SDK context:', context);
       if (context && context.path) {
         return context.path;
       }
+    } else {
+      // eslint-disable-next-line no-console
+      console.log('DA SDK not found');
     }
+    
     return null;
   } catch (error) {
     // eslint-disable-next-line no-console
@@ -101,8 +134,10 @@ async function initialize() {
 
   // Try to get page name from DA SDK
   if (pathInput) {
-    // Wait a bit for DA SDK to fully load
+    // Wait longer for DA SDK to fully load
     setTimeout(async () => {
+      // eslint-disable-next-line no-console
+      console.log('Attempting to get page name from DA SDK...');
       const daPageName = await getCurrentPageNameFromDA();
       if (daPageName) {
         pathInput.value = daPageName;
@@ -114,7 +149,7 @@ async function initialize() {
         // eslint-disable-next-line no-console
         console.log('DA SDK did not provide page name, using manual input');
       }
-    }, 1000); // Wait 1 second for DA SDK to initialize
+    }, 3000); // Wait 3 seconds for DA SDK to initialize
   }
 
   // Add event listener for create button
