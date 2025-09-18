@@ -31,13 +31,15 @@
   }
 
   #text-to-html-container {
-    padding: 5px;
+    padding: 24px;
     font-family: var(--font-family);
     margin: 0;
     background: #e5e5e5;
     min-height: 600px;
     overflow-y: auto;
     position: relative;
+    max-width: none;
+    width: 100%;
   }
 
   #text-to-html-container::before {
@@ -54,9 +56,9 @@
   .info-note {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
-    padding: 16px 20px;
-    border-radius: 16px;
-    margin-bottom: 24px;
+    padding: 12px 16px;
+    border-radius: 12px;
+    margin-bottom: 16px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: var(--shadow-lg);
     color: var(--text-primary);
@@ -93,15 +95,15 @@
   }
   
   .input-section {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     animation: slideInLeft 0.6s ease-out 0.2s both;
   }
   
   .input-group {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
-    padding: 10px;
+    padding: 20px;
     border-radius: 16px;
     box-shadow: var(--shadow-md);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -226,11 +228,11 @@
   }
 
   .da-config-section {
-    margin-bottom: 24px;
-    padding: 24px;
+    margin-bottom: 16px;
+    padding: 12px;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
-    border-radius: 20px;
+    border-radius: 12px;
     box-shadow: var(--shadow-lg);
     border: 1px solid rgba(255, 255, 255, 0.2);
     position: relative;
@@ -283,7 +285,7 @@
   }
 
   .status-messages {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     min-height: 20px;
   }
 
@@ -429,10 +431,10 @@
   .action-section {
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 12px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    border-radius: 20px;
+    border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: var(--shadow-lg);
   }
