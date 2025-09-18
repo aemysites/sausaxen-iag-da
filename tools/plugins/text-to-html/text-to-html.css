@@ -31,7 +31,7 @@
   }
 
   #text-to-html-container {
-    padding: 24px;
+    padding: 5px;
     font-family: var(--font-family);
     margin: 0;
     background: #e5e5e5;
@@ -101,7 +101,7 @@
     margin-bottom: 20px;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
-    padding: 20px;
+    padding: 10px;
     border-radius: 16px;
     box-shadow: var(--shadow-md);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -134,18 +134,6 @@
     position: relative;
     padding-left: 8px;
   }
-
-  label::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 3px;
-    height: 16px;
-    background: var(--gradient-primary);
-    border-radius: 2px;
-  }
   
   small {
     display: block;
@@ -157,7 +145,7 @@
   
   textarea {
     width: 100%;
-    padding: 16px;
+    padding: 1px;
     border: 2px solid transparent;
     border-radius: 12px;
     background: rgba(255, 255, 255, 0.9);
