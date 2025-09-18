@@ -34,7 +34,7 @@
     padding: 24px;
     font-family: var(--font-family);
     margin: 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #e5e5e5;
     min-height: 600px;
     overflow-y: auto;
     position: relative;
@@ -47,8 +47,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
-    backdrop-filter: blur(10px);
+    background: transparent;
     z-index: -1;
   }
   
