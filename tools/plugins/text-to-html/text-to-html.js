@@ -94,10 +94,12 @@ async function createDAPageFromForm() {
     // Check if there's page path information in the context
     const pagePath = context.path || context.pagePath || context.currentPath;
     if (pagePath) {
-      pathInput.value = pagePath;
-      pathInput.placeholder = `Current: ${pagePath}`;
+      // Append .html to the path
+      const pagePathWithExtension = `${pagePath}.html`;
+      pathInput.value = pagePathWithExtension;
+      pathInput.placeholder = `Current: ${pagePathWithExtension}`;
       // eslint-disable-next-line no-console
-      console.log('DA SDK provided page path:', pagePath);
+      console.log('DA SDK provided page path:', pagePathWithExtension);
     }
   }
 
