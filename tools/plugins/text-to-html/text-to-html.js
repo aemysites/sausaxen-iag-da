@@ -1,64 +1,23 @@
 /* eslint-disable import/no-unresolved */
 import { showStatus } from './utils.js';
 
-// Store the page name received from parent window
-let receivedPageName = null;
-
-// Listen for messages from parent window
-window.addEventListener('message', (event) => {
-  if (event.data && event.data.type === 'DA_PAGE_PATH') {
-    receivedPageName = event.data.pagePath;
-    // Update the input field if it exists
-    const pathInput = document.getElementById('da-path');
-    if (pathInput && receivedPageName) {
-      pathInput.value = receivedPageName;
-    }
-  }
-});
-
-// Request page path from parent window
-function requestPagePathFromParent() {
+// Function to get current page name using proper DA SDK
+async function getCurrentPageNameFromDA() {
   try {
-    window.parent.postMessage({ type: 'REQUEST_DA_PAGE_PATH' }, '*');
-  } catch (e) {
-    // Ignore if can't send message
+    // Use the correct DA_SDK global pattern
+    if (typeof DA_SDK !== 'undefined') {
+      const { context } = await DA_SDK;
+      if (context && context.path) {
+        return context.path;
+      }
+    }
+    return null;
+  } catch (error) {
+    console.warn('Error getting page name from DA SDK:', error);
+    return null;
   }
 }
 
-// Function to get current page name from URL
-function getCurrentPageName() {
-  // If we received page name from parent, use that
-  if (receivedPageName) {
-    return receivedPageName;
-  }
-
-  // Fallback: try to extract from current URL (will likely be plugin URL)
-  const currentUrl = window.location.href;
-  const url = new URL(currentUrl);
-  let pathname;
-
-  // Check if this is a DA (Document Authoring) URL with hash fragment
-  if (url.hash && url.hash.startsWith('#')) {
-    // Extract path from hash fragment (DA URLs use hash routing)
-    pathname = url.hash.substring(1); // Remove the # symbol
-  } else {
-    // Regular URL - use pathname
-    pathname = url.pathname;
-  }
-
-  // Remove file extensions
-  pathname = pathname.replace(/\.(html|htm)$/i, '');
-
-  // Remove leading slash but keep the path structure
-  pathname = pathname.replace(/^\/+/, '');
-
-  // If empty (root path), use a default name
-  if (!pathname) {
-    pathname = 'home';
-  }
-
-  return pathname;
-}
 
 // Create a new DA page with the prompt content
 async function createDAPageFromForm() {
@@ -74,10 +33,9 @@ async function createDAPageFromForm() {
     return;
   }
 
-  // If no page name provided, use current page name
   if (!pageName) {
-    pageName = getCurrentPageName();
-    showStatus(`Using current page name: "${pageName}"`, 'info');
+    showStatus('Please enter a page name.', 'error');
+    return;
   }
 
   const originalText = createButton.textContent;
@@ -136,18 +94,24 @@ async function createDAPageFromForm() {
   }
 }
 
-function initialize() {
+async function initialize() {
   const createButton = document.getElementById('create-da-page');
   const pathInput = document.getElementById('da-path');
 
-  // Request page path from parent window
-  requestPagePathFromParent();
-
-  // Auto-populate page name with current page (fallback)
+  // Try to get page name from DA SDK
   if (pathInput) {
-    const currentPageName = getCurrentPageName();
-    pathInput.value = currentPageName;
-    pathInput.placeholder = `e.g., ${currentPageName} or path/to/page`;
+    // Wait a bit for DA SDK to fully load
+    setTimeout(async () => {
+      const daPageName = await getCurrentPageNameFromDA();
+      if (daPageName) {
+        pathInput.value = daPageName;
+        pathInput.placeholder = `Current: ${daPageName}`;
+        console.log('DA SDK provided page name:', daPageName);
+      } else {
+        pathInput.placeholder = '';
+        console.log('DA SDK did not provide page name, using manual input');
+      }
+    }, 1000); // Wait 1 second for DA SDK to initialize
   }
 
   // Add event listener for create button
