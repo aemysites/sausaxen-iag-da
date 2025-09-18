@@ -1,4 +1,5 @@
 /* eslint-disable import/no-unresolved */
+/* global DA_SDK */
 import { showStatus } from './utils.js';
 
 // Function to get current page name using proper DA SDK
@@ -13,11 +14,11 @@ async function getCurrentPageNameFromDA() {
     }
     return null;
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.warn('Error getting page name from DA SDK:', error);
     return null;
   }
 }
-
 
 // Create a new DA page with the prompt content
 async function createDAPageFromForm() {
@@ -26,7 +27,7 @@ async function createDAPageFromForm() {
   const createButton = document.getElementById('create-da-page');
 
   const promptText = textInput.value.trim();
-  let pageName = pathInput.value.trim();
+  const pageName = pathInput.value.trim();
 
   if (!promptText) {
     showStatus('Please enter your prompt text.', 'error');
@@ -106,9 +107,11 @@ async function initialize() {
       if (daPageName) {
         pathInput.value = daPageName;
         pathInput.placeholder = `Current: ${daPageName}`;
+        // eslint-disable-next-line no-console
         console.log('DA SDK provided page name:', daPageName);
       } else {
         pathInput.placeholder = '';
+        // eslint-disable-next-line no-console
         console.log('DA SDK did not provide page name, using manual input');
       }
     }, 1000); // Wait 1 second for DA SDK to initialize
