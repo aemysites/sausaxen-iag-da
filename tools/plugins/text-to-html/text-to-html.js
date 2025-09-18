@@ -1,6 +1,6 @@
 /* eslint-disable import/no-unresolved */
-import { showStatus } from './utils.js';
 import DA_SDK from 'https://da.live/nx/utils/sdk.js';
+import { showStatus } from './utils.js';
 
 // Create a new DA page with the prompt content
 async function createDAPageFromForm() {
@@ -78,8 +78,8 @@ async function createDAPageFromForm() {
 }
 
 (async function init() {
-  const { context, token, actions } = await DA_SDK;
-  
+  const { context } = await DA_SDK;
+
   // Log available context keys for debugging
   Object.keys(context).forEach((key) => {
     // eslint-disable-next-line no-console
@@ -105,4 +105,4 @@ async function createDAPageFromForm() {
   if (createButton) {
     createButton.addEventListener('click', createDAPageFromForm);
   }
-})();
+}());
