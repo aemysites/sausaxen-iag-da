@@ -1,5 +1,4 @@
 /* eslint-disable import/no-unresolved */
-/* global DA_SDK */
 import { showStatus } from './utils.js';
 
 // Function to get current page name using alternative methods
@@ -7,7 +6,6 @@ async function getCurrentPageNameFromDA() {
   try {
     // eslint-disable-next-line no-console
     console.log('Trying alternative methods to get page name...');
-    
     // Method 1: Check URL parameters
     const urlParams = new URLSearchParams(window.location.search);
     const pathFromParams = urlParams.get('path') || urlParams.get('dapath') || urlParams.get('pagePath');
@@ -25,7 +23,6 @@ async function getCurrentPageNameFromDA() {
         console.log('Document referrer:', document.referrer);
         // eslint-disable-next-line no-console
         console.log('Referrer hash:', referrerUrl.hash);
-        
         if (referrerUrl.hash && referrerUrl.hash.startsWith('#')) {
           const pathFromHash = referrerUrl.hash.substring(1);
           // eslint-disable-next-line no-console
