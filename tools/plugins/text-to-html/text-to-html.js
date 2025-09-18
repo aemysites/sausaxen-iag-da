@@ -3,19 +3,36 @@ import { showStatus } from './utils.js';
 
 // Function to get current page name from URL
 function getCurrentPageName() {
-  // Try to get the parent window's URL first (if plugin is in an iframe)
+  // Try to get the top-most window's URL (DA editor page)
   let currentUrl;
   try {
-    currentUrl = window.parent !== window ? window.parent.location.href : window.location.href;
+    // Go up the window hierarchy to find the main DA window
+    let targetWindow = window;
+    while (targetWindow.parent && targetWindow.parent !== targetWindow) {
+      targetWindow = targetWindow.parent;
+    }
+    currentUrl = targetWindow.location.href;
   } catch (e) {
-    // If cross-origin, fall back to current window
-    currentUrl = window.location.href;
+    // If cross-origin, try different approaches
+    try {
+      currentUrl = window.top.location.href;
+    } catch (e2) {
+      // Final fallback to current window
+      currentUrl = window.location.href;
+    }
   }
 
-  const { pathname: urlPathname } = new URL(currentUrl);
+  const url = new URL(currentUrl);
+  let pathname;
 
-  // Extract path from URL and clean it up
-  let pathname = urlPathname;
+  // Check if this is a DA (Document Authoring) URL with hash fragment
+  if (url.hash && url.hash.startsWith('#')) {
+    // Extract path from hash fragment (DA URLs use hash routing)
+    pathname = url.hash.substring(1); // Remove the # symbol
+  } else {
+    // Regular URL - use pathname
+    pathname = url.pathname;
+  }
 
   // Remove file extensions
   pathname = pathname.replace(/\.(html|htm)$/i, '');
