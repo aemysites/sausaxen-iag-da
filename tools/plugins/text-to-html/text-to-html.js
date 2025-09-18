@@ -1,49 +1,6 @@
 /* eslint-disable import/no-unresolved */
 import { showStatus } from './utils.js';
-
-// Function to get current page name using alternative methods
-async function getCurrentPageNameFromDA() {
-  try {
-    // eslint-disable-next-line no-console
-    console.log('Trying alternative methods to get page name...');
-    // Method 1: Check URL parameters
-    const urlParams = new URLSearchParams(window.location.search);
-    const pathFromParams = urlParams.get('path') || urlParams.get('dapath') || urlParams.get('pagePath');
-    if (pathFromParams) {
-      // eslint-disable-next-line no-console
-      console.log('Found page path in URL params:', pathFromParams);
-      return pathFromParams;
-    }
-
-    // Method 2: Check document.referrer
-    if (document.referrer) {
-      try {
-        const referrerUrl = new URL(document.referrer);
-        // eslint-disable-next-line no-console
-        console.log('Document referrer:', document.referrer);
-        // eslint-disable-next-line no-console
-        console.log('Referrer hash:', referrerUrl.hash);
-        if (referrerUrl.hash && referrerUrl.hash.startsWith('#')) {
-          const pathFromHash = referrerUrl.hash.substring(1);
-          // eslint-disable-next-line no-console
-          console.log('Found page path in referrer hash:', pathFromHash);
-          return pathFromHash;
-        }
-      } catch (e) {
-        // eslint-disable-next-line no-console
-        console.log('Could not parse referrer URL:', e);
-      }
-    }
-
-    // eslint-disable-next-line no-console
-    console.log('No page path found through alternative methods');
-    return null;
-  } catch (error) {
-    // eslint-disable-next-line no-console
-    console.warn('Error getting page name through alternative methods:', error);
-    return null;
-  }
-}
+import DA_SDK from 'https://da.live/nx/utils/sdk.js';
 
 // Create a new DA page with the prompt content
 async function createDAPageFromForm() {
@@ -120,34 +77,32 @@ async function createDAPageFromForm() {
   }
 }
 
-async function initialize() {
+(async function init() {
+  const { context, token, actions } = await DA_SDK;
+  
+  // Log available context keys for debugging
+  Object.keys(context).forEach((key) => {
+    // eslint-disable-next-line no-console
+    console.log(`DA_SDK context.${key}:`, context[key]);
+  });
+
   const createButton = document.getElementById('create-da-page');
   const pathInput = document.getElementById('da-path');
 
-  // Try to get page name from DA SDK
-  if (pathInput) {
-    // Wait longer for DA SDK to fully load
-    setTimeout(async () => {
+  // Use DA SDK context to get page information
+  if (pathInput && context) {
+    // Check if there's page path information in the context
+    const pagePath = context.path || context.pagePath || context.currentPath;
+    if (pagePath) {
+      pathInput.value = pagePath;
+      pathInput.placeholder = `Current: ${pagePath}`;
       // eslint-disable-next-line no-console
-      console.log('Attempting to get page name from DA SDK...');
-      const daPageName = await getCurrentPageNameFromDA();
-      if (daPageName) {
-        pathInput.value = daPageName;
-        pathInput.placeholder = `Current: ${daPageName}`;
-        // eslint-disable-next-line no-console
-        console.log('DA SDK provided page name:', daPageName);
-      } else {
-        pathInput.placeholder = '';
-        // eslint-disable-next-line no-console
-        console.log('DA SDK did not provide page name, using manual input');
-      }
-    }, 3000); // Wait 3 seconds for DA SDK to initialize
+      console.log('DA SDK provided page path:', pagePath);
+    }
   }
 
   // Add event listener for create button
   if (createButton) {
     createButton.addEventListener('click', createDAPageFromForm);
   }
-}
-
-document.addEventListener('DOMContentLoaded', initialize);
+})();
