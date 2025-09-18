@@ -13,21 +13,19 @@ async function getCurrentPageNameFromDA() {
     // eslint-disable-next-line no-console
     console.log('window.DA_SDK:', typeof window.DA_SDK);
     // eslint-disable-next-line no-console
-    console.log('All window properties with DA:', Object.keys(window).filter(key => key.includes('DA')));
+    console.log('All window properties with DA:', Object.keys(window).filter((key) => key.includes('DA')));
 
     // Try multiple approaches to access DA SDK
     let sdk = null;
-    
+
     // Approach 1: Direct global
     if (typeof DA_SDK !== 'undefined') {
       sdk = DA_SDK;
-    }
-    // Approach 2: Window global
-    else if (typeof window.DA_SDK !== 'undefined') {
+    } else if (typeof window.DA_SDK !== 'undefined') {
+      // Approach 2: Window global
       sdk = window.DA_SDK;
-    }
-    // Approach 3: Check if it's in a different global
-    else if (typeof window.da !== 'undefined' && window.da.SDK) {
+    } else if (typeof window.da !== 'undefined' && window.da.SDK) {
+      // Approach 3: Check if it's in a different global
       sdk = window.da.SDK;
     }
 
@@ -44,7 +42,7 @@ async function getCurrentPageNameFromDA() {
       // eslint-disable-next-line no-console
       console.log('DA SDK not found');
     }
-    
+
     return null;
   } catch (error) {
     // eslint-disable-next-line no-console
