@@ -1,27 +1,39 @@
 /* eslint-disable import/no-unresolved */
 import { showStatus } from './utils.js';
 
-// Function to get current page name from URL
-function getCurrentPageName() {
-  // Try to get the top-most window's URL (DA editor page)
-  let currentUrl;
-  try {
-    // Go up the window hierarchy to find the main DA window
-    let targetWindow = window;
-    while (targetWindow.parent && targetWindow.parent !== targetWindow) {
-      targetWindow = targetWindow.parent;
-    }
-    currentUrl = targetWindow.location.href;
-  } catch (e) {
-    // If cross-origin, try different approaches
-    try {
-      currentUrl = window.top.location.href;
-    } catch (e2) {
-      // Final fallback to current window
-      currentUrl = window.location.href;
+// Store the page name received from parent window
+let receivedPageName = null;
+
+// Listen for messages from parent window
+window.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'DA_PAGE_PATH') {
+    receivedPageName = event.data.pagePath;
+    // Update the input field if it exists
+    const pathInput = document.getElementById('da-path');
+    if (pathInput && receivedPageName) {
+      pathInput.value = receivedPageName;
     }
   }
+});
 
+// Request page path from parent window
+function requestPagePathFromParent() {
+  try {
+    window.parent.postMessage({ type: 'REQUEST_DA_PAGE_PATH' }, '*');
+  } catch (e) {
+    // Ignore if can't send message
+  }
+}
+
+// Function to get current page name from URL
+function getCurrentPageName() {
+  // If we received page name from parent, use that
+  if (receivedPageName) {
+    return receivedPageName;
+  }
+
+  // Fallback: try to extract from current URL (will likely be plugin URL)
+  const currentUrl = window.location.href;
   const url = new URL(currentUrl);
   let pathname;
 
@@ -128,7 +140,10 @@ function initialize() {
   const createButton = document.getElementById('create-da-page');
   const pathInput = document.getElementById('da-path');
 
-  // Auto-populate page name with current page
+  // Request page path from parent window
+  requestPagePathFromParent();
+
+  // Auto-populate page name with current page (fallback)
   if (pathInput) {
     const currentPageName = getCurrentPageName();
     pathInput.value = currentPageName;
