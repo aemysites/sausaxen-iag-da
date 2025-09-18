@@ -2,51 +2,48 @@
 /* global DA_SDK */
 import { showStatus } from './utils.js';
 
-// Function to get current page name using proper DA SDK
+// Function to get current page name using alternative methods
 async function getCurrentPageNameFromDA() {
   try {
-    // Debug: Check what's available
     // eslint-disable-next-line no-console
-    console.log('Checking DA SDK availability...');
-    // eslint-disable-next-line no-console
-    console.log('typeof DA_SDK:', typeof DA_SDK);
-    // eslint-disable-next-line no-console
-    console.log('window.DA_SDK:', typeof window.DA_SDK);
-    // eslint-disable-next-line no-console
-    console.log('All window properties with DA:', Object.keys(window).filter((key) => key.includes('DA')));
-
-    // Try multiple approaches to access DA SDK
-    let sdk = null;
-
-    // Approach 1: Direct global
-    if (typeof DA_SDK !== 'undefined') {
-      sdk = DA_SDK;
-    } else if (typeof window.DA_SDK !== 'undefined') {
-      // Approach 2: Window global
-      sdk = window.DA_SDK;
-    } else if (typeof window.da !== 'undefined' && window.da.SDK) {
-      // Approach 3: Check if it's in a different global
-      sdk = window.da.SDK;
+    console.log('Trying alternative methods to get page name...');
+    
+    // Method 1: Check URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const pathFromParams = urlParams.get('path') || urlParams.get('dapath') || urlParams.get('pagePath');
+    if (pathFromParams) {
+      // eslint-disable-next-line no-console
+      console.log('Found page path in URL params:', pathFromParams);
+      return pathFromParams;
     }
 
-    if (sdk) {
-      // eslint-disable-next-line no-console
-      console.log('DA SDK found, attempting to get context...');
-      const { context } = await sdk;
-      // eslint-disable-next-line no-console
-      console.log('DA SDK context:', context);
-      if (context && context.path) {
-        return context.path;
+    // Method 2: Check document.referrer
+    if (document.referrer) {
+      try {
+        const referrerUrl = new URL(document.referrer);
+        // eslint-disable-next-line no-console
+        console.log('Document referrer:', document.referrer);
+        // eslint-disable-next-line no-console
+        console.log('Referrer hash:', referrerUrl.hash);
+        
+        if (referrerUrl.hash && referrerUrl.hash.startsWith('#')) {
+          const pathFromHash = referrerUrl.hash.substring(1);
+          // eslint-disable-next-line no-console
+          console.log('Found page path in referrer hash:', pathFromHash);
+          return pathFromHash;
+        }
+      } catch (e) {
+        // eslint-disable-next-line no-console
+        console.log('Could not parse referrer URL:', e);
       }
-    } else {
-      // eslint-disable-next-line no-console
-      console.log('DA SDK not found');
     }
 
+    // eslint-disable-next-line no-console
+    console.log('No page path found through alternative methods');
     return null;
   } catch (error) {
     // eslint-disable-next-line no-console
-    console.warn('Error getting page name from DA SDK:', error);
+    console.warn('Error getting page name through alternative methods:', error);
     return null;
   }
 }
