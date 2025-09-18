@@ -29,8 +29,8 @@ async function createDAPageFromForm() {
     createButton.textContent = 'Creating...';
     showStatus('Generating page...', 'info');
 
-    // Make API call to local server
-    const response = await fetch('http://localhost:8080/generate', {
+    // Make API call to Azure container app
+    const response = await fetch('https://da-page-gen-app.delightfulsmoke-b58759ef.eastus.azurecontainerapps.io/generate', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
