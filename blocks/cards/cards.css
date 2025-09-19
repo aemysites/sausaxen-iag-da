@@ -214,165 +214,190 @@
 
 .cards.cards9 {
   background: #fff;
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 32px 0;
+  max-width: 1200px;
+  margin: 10px auto;
+  padding: 10px 20px;
   box-sizing: border-box;
 }
 
 .cards.cards9 > ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0;
+  gap: 32px;
   margin: 0;
   padding: 0;
   list-style: none;
   box-sizing: border-box;
-  border: none;
 }
 
 .cards.cards9 > ul > li {
-  border-bottom: none;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
   background: #fff;
-  border-right: 1px solid #ececec;
+  border: 1px solid #ddd;
   box-sizing: border-box;
   min-width: 0;
+  overflow: hidden;
 }
 
 @media (width <= 900px) {
   .cards.cards9 > ul {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
 }
 
-.cards.cards9 > ul > li:last-child {
-  border-right: none;
-}
-
-.cards.cards9 > ul > li > .cards-card-body {
+.cards.cards9 .cards-card-body:first-child {
+  position: relative;
   width: 100%;
-  box-sizing: border-box;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #000;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 0;
-  margin: 0;
 }
 
-.cards.cards9 > ul > li > .cards-card-body:first-child {
-  aspect-ratio: 16 / 9;
-  background-color: #222;
+.cards.cards9 .cards-card-body:first-child p:first-child {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 180px;
-  padding: 0;
   margin: 0;
-  border-radius: 0;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-
-.cards.cards9 > ul > li:nth-child(1) > .cards-card-body:first-child {
-  background-image: url('/assets/fire-thumb.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-.cards.cards9 > ul > li:nth-child(2) > .cards-card-body:first-child {
-  background-image: url('/assets/flood-thumb.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-.cards.cards9 > ul > li:nth-child(3) > .cards-card-body:first-child {
-  background-image: url('/assets/heat-thumb.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-.cards.cards9 > ul > li > .cards-card-body:first-child .button-container .button {
-  width: 56px;
-  height: 56px;
-  background: rgb(20 20 20 / 55%);
-  border-radius: 50%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   padding: 0;
-  border: none;
-  text-indent: -9999px;
-  box-shadow: 0 2px 8px 0 rgb(0 0 0 / 10%);
+  flex: 1;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  line-height: 0;
 }
 
-.cards.cards9 > ul > li > .cards-card-body:first-child .button-container .button::before {
+.cards.cards9 .cards-card-body:first-child img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   display: block;
   position: absolute;
-  left: 50%;
   top: 50%;
-  transform: translate(-40%, -50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.cards.cards9 .cards-card-body:first-child .button-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  margin: 0;
+  padding: 0;
+}
+
+.cards.cards9 .cards-card-body:first-child .button {
+  width: 80px;
+  height: 80px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-indent: -9999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  position: relative;
+  z-index: 15;
+}
+
+.cards.cards9 .cards-card-body:first-child .button:hover {
+  background: rgba(0, 0, 0, 0.7);
+  transform: scale(1.05);
+}
+
+.cards.cards9 .cards-card-body:first-child .button::before {
+  content: "";
   width: 0;
   height: 0;
-  border-top: 12px solid transparent;
-  border-bottom: 12px solid transparent;
-  border-left: 18px solid #fff;
-  content: "";
+  border-top: 16px solid transparent;
+  border-bottom: 16px solid transparent;
+  border-left: 24px solid #fff;
+  margin-left: 4px;
 }
 
-.cards.cards9 > ul > li > .cards-card-body:not(:first-child) {
-  padding: 32px 36px 36px;
-  box-sizing: border-box;
+.cards.cards9 .video-player {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 3;
+}
+
+.cards.cards9 .video-player video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cards.cards9 .cards-card-body:last-child {
+  padding: 24px 20px;
+  text-align: center;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: flex-start;
+  margin: 0;
 }
 
-.cards.cards9 > ul > li > .cards-card-body:not(:first-child) h3 {
-  color: #1A237E;
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 12px;
-  margin-bottom: 14px;
+.cards.cards9 .cards-card-body:last-child h3 {
+  color: #010c66;
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0 0 16px 0;
   line-height: 1.2;
 }
 
-.cards.cards9 > ul > li > .cards-card-body:not(:first-child) p {
-  color: #283593;
-  font-size: 15px;
-  font-weight: normal;
-  text-align: center;
+.cards.cards9 .cards-card-body:last-child p {
+  color: #010c66;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.7;
   margin: 0;
-  line-height: 1.6;
-  max-width: 100%;
 }
 
-.cards.cards9 ul,
-.cards.cards9 ul > li {
-  margin: 0;
-  padding: 0;
-}
-
-@media (width <= 900px) {
-  .cards.cards9 > ul > li {
-    border-right: none;
-    border-bottom: 1px solid #ececec;
-    margin-bottom: 24px;
+@media (width <= 600px) {
+  .cards.cards9 {
+    padding: 20px 16px;
   }
-
-  .cards.cards9 > ul > li:last-child {
-    border-bottom: none;
+  
+  .cards.cards9 .cards-card-body:first-child .button {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .cards.cards9 .cards-card-body:first-child .button::before {
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 18px solid #333;
+    margin-left: 3px;
+  }
+  
+  .cards.cards9 .cards-card-body:last-child {
+    padding: 20px 16px;
+  }
+  
+  .cards.cards9 .cards-card-body:last-child h3 {
+    font-size: 20px;
+  }
+  
+  .cards.cards9 .cards-card-body:last-child p {
+    font-size: 14px;
   }
 }
 
